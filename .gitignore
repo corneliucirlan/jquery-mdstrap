@@ -34,3 +34,6 @@ GitHub.sublime-settings
 ### Sass ###
 .sass-cache/
 *.css.map
+
+### Prepros ###
+prepros.cfg
