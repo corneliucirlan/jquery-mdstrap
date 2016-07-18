@@ -1,0 +1,42 @@
+$bg-color : #0769ad
+$body-color : #eee
+
+$desktop-size: 992px
+
+body
+    background-color: $bg-color
+    color: $body-color
+    text-align: justify
+    font-family: Helvetica
+
+header
+    position: relative
+    overflow: hidden
+    height: auto
+
+    nav
+        position: relative
+        width: 100%
+
+        .container-fluid
+            max-width: $desktop-size
+            margin: 0 auto
+
+main
+    width: 100%
+    margin-top: 3.125rem
+    padding: 2rem
+    background-color: #eee
+    color: #444
+    box-shadow: 0 5px 15px rgba(black, 0.5)
+
+section
+    padding: 1rem 0
+
+pre
+    padding: 1rem
+
+@media (min-width: $desktop-size)
+    main
+        max-width: $desktop-size
+        margin-top: 5rem

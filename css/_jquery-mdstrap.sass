@@ -1,0 +1,95 @@
+.overlay
+	position: fixed
+	display: none
+	height: 100%
+	margin: 0 auto
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(black, 0.4)
+	z-index: 1000
+
+.fixed-top
+	background-color: rgba(white, 0.9)
+	box-shadow: 0 2px 5px 0 rgba(black, 0.16), 0  2px 10px 0 rgba(black, 0.12)
+	transition: all 0.3s ease-in-out
+
+.disable-scroll
+	overflow: hidden
+	height: 100%
+
+.navbar-toggler
+	&:active, &:focus, &:hover, &:visited
+		outline: 0
+
+header
+	nav
+		background-color: transparent
+		padding: 0
+
+		.container-fluid
+			width: 100%
+			padding: 0
+
+		.navbar-nav
+			display: none
+			position: fixed
+			max-width: 13rem
+			width: 100%
+			background-color: white
+			left: -13rem
+			top: 0
+			height: 100vh
+			box-shadow: 3px 0 3px rgba(black, 0.2)
+			z-index: 1030
+			overflow: auto
+
+			.nav-item
+				display: block
+				width: 100%
+				margin: 0
+				padding: 0.5rem 2rem
+				border-bottom: 1px solid #ddd
+				transition: all 0.2s ease-in-out
+
+				& + .nav-item
+					margin: 0
+
+				&:last-child
+					border-bottom: none
+
+				a
+					font-size: 2rem
+
+@media (min-width: 992px)
+	header
+		nav
+			.container-fluid
+				width: 100%
+				margin: 0 auto
+
+				.navbar-nav
+					display: block
+					position: relative
+					left: 0
+					top: 0
+					max-width: 100%
+					max-height: 50px
+					height: 100%
+					box-shadow: none
+					background-color: transparent
+
+					.nav-item
+						float: left
+						width: auto
+						padding: 0.4rem 0
+						margin-left: 1.5rem
+						border-bottom: 0
+						color: white
+
+						&:first-child
+							margin-left: 0
+
+						&.active, &:hover
+							color: darken(white, 10%)

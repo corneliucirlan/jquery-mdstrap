@@ -18,13 +18,36 @@
 
         // Plugin default settings
         var defaults = {
+            'fixedTop'          : true,
+            'menuTrigger'       : 'navbar-toggler',
             'scrollValue'       : '10',
             'mobileMenuBreak'   : '992',
             'overlay'           : {
                 'tag'       : 'div',
                 'class'     : 'overlay',
             },
-            'fixedTop'          : 'fixed-top',
+        };
+
+        // Various internal options/classes
+        var internal = {
+            'fixedTop'              : 'fixed-top',
+            'enablePointerEvents'   : {'pointer-events': 'all'},
+            'disablePointerEvents'  : {'pointer-events': 'none'},
+            'disableScroll'         : 'disable-scroll',
+            'menu'                  : {
+                    'visibleMenu'       : {
+                        'display': 'block',
+                        'left': '0rem',
+                    },
+                    'hiddenMenu'        : {
+                        'display': 'none',
+                        'left': '-13rem'
+                    },
+                    'enableCss'         : {'display' : 'block'},
+                    'disableCss'        : {'display' : 'none'},
+                    'enableAnimate'     : {'left' : '0rem'},
+                    'disableAnimate'    : {'left' : '-13rem'},
+            },
         };
 
         // Plugin settings
@@ -37,13 +60,14 @@
         // Init function
         function initialize()
         {
-            //console.log(settings);
-
             // Append overlay to document
             $('body').prepend('<'+ settings.overlay.tag +' class="'+ settings.overlay.class +'"></'+ settings.overlay.tag +'>');
 
             // Detect scroll
             toggleFixedTop();
+
+            // Debugging ...
+            debugging();
         };
 
         $(window).on('scroll', function(event) {
@@ -53,25 +77,20 @@
         // Toggle menu fixed top
         function toggleFixedTop()
         {
-            var wScroll = $(window).scrollTop();
+            if (settings.fixedTop === true)
+            {
+                var wScroll = $(window).scrollTop();
 
-            if (wScroll > settings.scrollValue) $menuParent.addClass(settings.fixedTop);
-                else $menuParent.removeClass(settings.fixedTop);
+                if (wScroll > settings.scrollValue) $menuParent.addClass(internal.fixedTop);
+                    else $menuParent.removeClass(internal.fixedTop);
+            }
         };
 
         // Toggle menu
         function toggleMenuDisplay()
         {
-            if ($(this).width() >= settings.mobileMenuBreak)
-                    $menu.css({
-                        'display': 'block',
-                        'left': '0rem',
-                    });
-                else
-                    $menu.css({
-                        'display': 'none',
-                        'left': '-13rem'
-                    });
+            if ($(window).width() >= settings.mobileMenuBreak) $menu.css(internal.menu.visibleMenu);
+                else $menu.css(internal.menu.hiddenMenu);
         };
 
         // Close mobile menu
@@ -79,18 +98,12 @@
         {
             var wScroll = $(window).scrollTop();
 
-            $menu
-                .css({
-                    'display' : 'none',
-                })
-                .animate({
-                    'left' : '-13rem'
-                });
+            $menu.css(internal.menu.disableCss).animate(internal.menu.disableAnimate);
 
             if (wScroll > settings.scrollValue)
-                $menuParent.addClass('fixed-top');
+                $menuParent.addClass(internal.fixedTop);
 
-            $menuParent.css({'pointer-events': 'all'});
+            $menuParent.css(internal.enablePointerEvents);
 
             toggleOverlay();
         };
@@ -99,7 +112,7 @@
         function toggleOverlay()
         {
             $('.' + settings.overlay.class).fadeToggle('fast');
-            $('body').toggleClass('block-scroll');
+            $('body').toggleClass(internal.disableScroll);
         };
 
         // Close menu on ESC key
@@ -109,7 +122,7 @@
         });
 
         // Close menu when overlay clicked
-        $('.overlay').on('click', function(event) {
+        $('.' + settings.overlay.class).on('click', function(event) {
             closeMobileMenu();
         });
 
@@ -119,22 +132,27 @@
         });
 
         // Animate mobile menu
-        $('.navbar-toggler').on('click', function(event) {
+        $('.' + settings.menuTrigger).on('click', function(event) {
             event.preventDefault();
 
             toggleOverlay();
 
-            $menu
-                .css({
-                    'display' : 'block',
-                })
-                .animate({
-                    'left' : '0rem'
-                });
+            $menu.css(internal.menu.enableCss).animate(internal.menu.enableAnimate);
 
-            $menuParent.removeClass(settings.fixedTop).css({'pointer-events': 'none'});
+            $menuParent.removeClass(internal.fixedTop).css(internal.disablePointerEvents);
         });
 
+        // Debugging
+        function debugging()
+        {
+            console.log("\nPlugin settings:");
+            console.log(settings);
+
+            console.log("\nInternal settings/classes:");
+            console.log(internal);
+
+            console.log("\njQuery version: " + jQuery.fn.jquery);
+        }
     };
 
 })(jQuery);
