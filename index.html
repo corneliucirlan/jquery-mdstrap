@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery mdStrip</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous" />
+
+        <!-- Menu Design -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-fixed-top navbar-full navbar-light">
+
+                <div class="container-fluid">
+
+                    <!-- Navigation toggle -->
+                    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">&#9776;</button>
+
+                    <div class="nav navbar-nav">
+                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#">Features</a>
+                        <a class="nav-item nav-link" href="#">Pricing</a>
+                        <a class="nav-item nav-link" href="#">About</a>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <main class="container-fluid">
+
+                <!-- Plugin Description -->
+                <section class="row">
+                    <div class="col-xs-12">
+                        <h2>About </h2>
+                        jQuery mdStrap plugin creates a side menu for smartphones or other handheld devices. It's built based on Twitter Bootstrap's framework version 4 (currently alpha 2).
+                    </div>
+                </section>
+
+                <!-- Plugin Installation -->
+                <section class="row">
+                    <div class="col-xs-12">
+                        <h2>Plugin installation</h2>
+                        <p>You'll have to include the CSS in the <samp>&lt;head&gt;</samp> and JavaScript just before your <samp>&lt;/body&gt;</samp> of your project and that's it.</p>
+                        <pre>
+                            <code>
+&lt;head&gt;
+    ...
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous" /&gt;
+
+    &lt;!-- Menu Design --&gt;
+    &lt;link rel="stylesheet" href="css/style.css" /&gt;
+    ...
+&lt;/head&gt;
+
+....
+
+    &lt;!-- jQuery --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" async defer&gt;&lt;/script&gt;
+
+    &lt;!-- jQuery mdStrip --&gt;
+    &lt;script src="jquery-mdstrap.js" defer&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+
+        $(document).ready(function() {
+
+            $('.navbar-nav').mdStrap();
+
+        });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+
+
+                            </code>
+                        </pre>
+
+                    </div>
+                </section>
+
+                <!-- Plugin Options -->
+                <section class="row">
+                    <div class="col-xs-12">
+                        <h2>Options</h2>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type/Default</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <!-- Fixed Top -->
+                                <tr>
+                                    <td><samp>fixedTop</samp></td>
+                                    <td>Bool (<samp>true</samp> by default)</td>
+                                    <td>Setting it to true allowes you to customise the appearence of the menu when scrolling.</td>
+                                </tr>
+
+                                <!-- Menu Trigger -->
+                                <tr>
+                                    <td><samp>menuTrigger</samp></td>
+                                    <td>CSS class (<samp>navbar-toggler</samp> by default)</td>
+                                    <td>The class for the button that will trigger the menu when on mobile devices.</td>
+                                </tr>
+
+                                <!-- Scroll Value -->
+                                <tr>
+                                    <td><samp>scrollValue</samp></td>
+                                    <td>integer (<sam>10</sam> by default)</td>
+                                    <td>If <samp>fixedTop</samp> is set to <samp>true</samp>, this is required to trigger the necessary class for stylize the navbar.</td>
+                                </tr>
+
+                                <!-- Menu Break Point -->
+                                <tr>
+                                    <td><samp>mobileMenuBreak</samp></td>
+                                    <td>integer (<samp>992</samp> by default)</td>
+                                    <td>In <samp>px</samp>, define the width breakpoint on which the mobile version of the menu kicks in.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <p>Suspendisse rhoncus urna a nulla cursus pharetra. Ut ullamcorper tempor orci, a auctor velit tempor in. Duis ac lectus odio. Aliquam a condimentum lorem. Duis risus libero, finibus quis porttitor eget, gravida in leo. Nulla a venenatis neque. Vivamus ac fringilla nisl. Nam egestas condimentum neque, eget vestibulum massa pulvinar in. In elementum erat sapien, quis efficitur nunc vehicula at. Quisque vel nibh dictum, euismod nibh et, fermentum ipsum.</p> -->
+                    </div>
+                </section>
+
+                <!-- Other ... -->
+                <!-- <section class="row">
+                    <div class="col-xs-12">
+                        <p>Aliquam vitae ultrices tellus, quis tristique nisl. Donec non mi nec neque porttitor tincidunt. In bibendum ex dignissim semper semper. Duis condimentum viverra mollis. Praesent tortor diam, tempus eu leo quis, iaculis bibendum tellus. Maecenas condimentum mollis felis, eu vestibulum erat feugiat ac. Mauris tempor, lorem ac fermentum consectetur, nibh tortor luctus lorem, sit amet imperdiet turpis ipsum vitae lacus. Sed a sollicitudin quam, ac vehicula leo. Maecenas non dui egestas, interdum diam sed, volutpat elit. Phasellus rhoncus enim sed elit convallis molestie. Duis tempus ex quis ornare varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec mollis velit. Pellentesque sit amet lacus aliquet, euismod odio sit amet, laoreet massa. Sed ac molestie lacus, ac sollicitudin nisl.</p>
+                    </div>
+                </section> -->
+
+        </main>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" async defer></script>
+
+        <!-- jQuery mdStrip -->
+        <script src="jquery-mdstrap.js" defer></script>
+
+        <script>
+
+            $(document).ready(function() {
+
+                $('.navbar-nav').mdStrap({
+                    'fixedTop': true,
+                });
+
+            });
+
+        </script>
+    </body>
+</html>
