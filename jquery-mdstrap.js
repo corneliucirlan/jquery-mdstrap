@@ -22,10 +22,6 @@
             'menuTrigger'       : 'navbar-toggler',
             'scrollValue'       : '10',
             'mobileMenuBreak'   : '992',
-            'overlay'           : {
-                'tag'       : 'div',
-                'class'     : 'overlay',
-            },
         };
 
         // Various internal options/classes
@@ -48,6 +44,7 @@
                     'enableAnimate'     : {'left' : '0rem'},
                     'disableAnimate'    : {'left' : '-13rem'},
             },
+            'overlay'               : 'mdstrap-overlay',
         };
 
         // Plugin settings
@@ -61,7 +58,7 @@
         function initialize()
         {
             // Append overlay to document
-            $('body').prepend('<'+ settings.overlay.tag +' class="'+ settings.overlay.class +'"></'+ settings.overlay.tag +'>');
+            $('body').prepend('<div class="' + internal.overlay + '"></div>');
 
             // Detect scroll
             toggleFixedTop();
@@ -111,18 +108,18 @@
         // Toggle overlay
         function toggleOverlay()
         {
-            $('.' + settings.overlay.class).fadeToggle('fast');
+            $('.' + internal.overlay).fadeToggle('fast');
             $('body').toggleClass(internal.disableScroll);
         };
 
         // Close menu on ESC key
         $(document).on('keydown', function(event) {
-            if (event.keyCode == 27 && $('.' + settings.overlay.class + ':visible').length > 0)
+            if (event.keyCode == 27 && $('.' + internal.overlay + ':visible').length > 0)
             closeMobileMenu();
         });
 
         // Close menu when overlay clicked
-        $('.' + settings.overlay.class).on('click', function(event) {
+        $('.' + internal.overlay).on('click', function(event) {
             closeMobileMenu();
         });
 

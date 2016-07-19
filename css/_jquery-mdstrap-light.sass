@@ -1,0 +1,19 @@
+/**
+ * Navbar light theme
+ */
+
+$link-color: #999
+$link-bg: white
+
+.navbar-light .navbar-nav
+    background-color: $link-bg
+
+    .nav-item
+        border-bottom: 1px solid #ddd
+
+    .nav-link
+    	color: $link-color
+    	//background-color: $link-bg
+
+    	&:active, &:focus, &:hover, &.active
+    		color: darken($link-color, 10%)
