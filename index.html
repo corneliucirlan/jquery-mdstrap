@@ -44,8 +44,49 @@
                     </div>
                 </section>
 
-                <!-- Plugin Usage -->
-                <!-- <section></section -->
+                <!-- Plugin Installation -->
+                <section class="row">
+                    <div class="col-xs-12">
+                        <h2>Plugin installation</h2>
+                        <p>You'll have to include the CSS in the <samp>&lt;head&gt;</samp> and JavaScript just before your <samp>&lt;/body&gt;</samp> of your project and that's it.</p>
+                        <pre>
+                            <code>
+&lt;head&gt;
+    ...
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous" /&gt;
+
+    &lt;!-- Menu Design --&gt;
+    &lt;link rel="stylesheet" href="css/style.css" /&gt;
+    ...
+&lt;/head&gt;
+
+....
+
+    &lt;!-- jQuery --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" async defer&gt;&lt;/script&gt;
+
+    &lt;!-- jQuery mdStrip --&gt;
+    &lt;script src="jquery-mdstrap.js" defer&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+
+        $(document).ready(function() {
+
+            $('.navbar-nav').mdStrap();
+
+        });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+
+
+                            </code>
+                        </pre>
+
+                    </div>
+                </section>
 
                 <!-- Plugin Options -->
                 <section class="row">
@@ -61,10 +102,33 @@
                             </thead>
 
                             <tbody>
+
+                                <!-- Fixed Top -->
                                 <tr>
-                                    <td>fixedTop</td>
+                                    <td><samp>fixedTop</samp></td>
                                     <td>Bool (<samp>true</samp> by default)</td>
                                     <td>Setting it to true allowes you to customise the appearence of the menu when scrolling.</td>
+                                </tr>
+
+                                <!-- Menu Trigger -->
+                                <tr>
+                                    <td><samp>menuTrigger</samp></td>
+                                    <td>CSS class (<samp>navbar-toggler</samp> by default)</td>
+                                    <td>The class for the button that will trigger the menu when on mobile devices.</td>
+                                </tr>
+
+                                <!-- Scroll Value -->
+                                <tr>
+                                    <td><samp>scrollValue</samp></td>
+                                    <td>integer (<sam>10</sam> by default)</td>
+                                    <td>If <samp>fixedTop</samp> is set to <samp>true</samp>, this is required to trigger the necessary class for stylize the navbar.</td>
+                                </tr>
+
+                                <!-- Menu Break Point -->
+                                <tr>
+                                    <td><samp>mobileMenuBreak</samp></td>
+                                    <td>integer (<samp>992</samp> by default)</td>
+                                    <td>In <samp>px</samp>, define the width breakpoint on which the mobile version of the menu kicks in.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -85,7 +149,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" async defer></script>
 
         <!-- jQuery mdStrip -->
-        <script src="jquery-mdstrap.js"></script>
+        <script src="jquery-mdstrap.js" defer></script>
 
         <script>
 
