@@ -29,7 +29,7 @@ main {
 }
 
 pre {
-  font-size: 1rem;
+  background-color: #ccd7d9 !important;
 }
 
 .tag {

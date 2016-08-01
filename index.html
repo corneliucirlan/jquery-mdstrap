@@ -8,10 +8,11 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous" />
 
+        <!-- PrismJS CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" />
+
         <!-- Menu Design -->
         <link rel="stylesheet" href="css/style.css" />
-
-        <!-- PrismJS CSS -->
     </head>
 
     <body>
@@ -52,38 +53,12 @@
                         <h2>Plugin installation</h2>
                         <p>You'll have to include the CSS in the <samp>&lt;head&gt;</samp> and JavaScript just before your <samp>&lt;/body&gt;</samp> of your project and that's it.</p>
                         <pre class="language-markup">
-                            <code>
-&lt;head&gt;
-    ...
-    &lt;!-- Bootstrap CSS --&gt;
-    &lt;link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous" /&gt;
+                            <code class="language-markup">
+  &lt;!-- Bootstrap CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" /&gt;
 
-    &lt;!-- Menu Design --&gt;
-    &lt;link rel="stylesheet" href="css/style.css" /&gt;
-    ...
-&lt;/head&gt;
-
-....
-
-    &lt;!-- jQuery --&gt;
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" async defer&gt;&lt;/script&gt;
-
-    &lt;!-- jQuery mdStrip --&gt;
-    &lt;script src="jquery-mdstrap.js" defer&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-
-        $(document).ready(function() {
-
-            $('.navbar-nav').mdStrap();
-
-        });
-
-    &lt;/script&gt;
-&lt;/body&gt;
-
-
-
+  &lt;!-- mdStrap Menu --&gt;
+&lt;link rel="stylesheet" href="css/mdstrap.css" /&gt;
                             </code>
                         </pre>
 
@@ -152,9 +127,9 @@
 
         <!-- PrismJS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/plugins/unescaped-markup/prism-unescaped-markup.min.css" />
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-core.min.js"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-markup.min.js"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-javascript.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-markup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-javascript.min.js"></script>
 
         <!-- jQuery mdStrip -->
         <script src="jquery-mdstrap.js" defer></script>
