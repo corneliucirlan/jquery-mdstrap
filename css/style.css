@@ -28,6 +28,14 @@ main {
   color: #444;
 }
 
+pre {
+  font-size: 1rem;
+}
+
+.tag {
+  font-size: 100%;
+}
+
 section {
   padding: 1rem 0;
 }
