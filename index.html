@@ -84,7 +84,7 @@
                                 <tr>
                                     <td><samp>fixedTop</samp></td>
                                     <td>Bool (<samp>true</samp> by default)</td>
-                                    <td>Setting it to true allowes you to customise the appearence of the menu when scrolling.</td>
+                                    <td>Setting it to true allowes you to customise the appearence of the menu when scrolling. Usually set only when <samp>.navbar-fixed-top</samp> class is present.</td>
                                 </tr>
 
                                 <!-- Menu Trigger -->
@@ -138,9 +138,7 @@
 
             $(document).ready(function() {
 
-                $('.navbar-nav').mdStrap({
-                    'fixedTop': true,
-                });
+                $('.navbar-nav').mdStrap();
 
             });
 
