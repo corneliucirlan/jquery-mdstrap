@@ -9,9 +9,11 @@
 
 ;(function($) {
     "use strict";
+    $.mobile.autoInitializePage = false;
 
     $.fn.mdStrap = function(options)
     {
+
         // Declare function variables
         var $menu = $(this);
         var $menuParent = $menu.parents('nav');
@@ -57,8 +59,11 @@
         // Init function
         function initialize()
         {
-            // Append overlay to document
+            // Add overlay to document
             $('body').prepend('<div class="' + internal.overlay + '"></div>');
+
+            // Add mobile swipe target
+            $('body').append('<div class="mobile-swipe"></div>');
 
             // Detect scroll
             toggleFixedTop();
@@ -132,6 +137,15 @@
         $('.' + settings.menuTrigger).on('click', function(event) {
             event.preventDefault();
 
+            toggleOverlay();
+
+            $menu.css(internal.menu.enableCss).animate(internal.menu.enableAnimate);
+
+            $menuParent.removeClass(internal.fixedTop).css(internal.disablePointerEvents);
+        });
+
+        // Slide out menu on touchscreen devices
+        $("div.mobile-swipe").on("swiperight", function(event) {
             toggleOverlay();
 
             $menu.css(internal.menu.enableCss).animate(internal.menu.enableAnimate);

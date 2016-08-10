@@ -61,6 +61,15 @@ pre {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.mobile-swipe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100vh;
+  background-color: transparent;
+}
+
 .fixed-top {
   background-color: white;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
