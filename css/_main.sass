@@ -13,6 +13,7 @@ header
     position: relative
     overflow: hidden
     height: auto
+    margin-bottom: 2rem
 
     nav
         position: relative
@@ -29,6 +30,10 @@ main
     color: #444
 
 pre
+    position: relative
+    z-index: -1
+
+code, pre
     background-color: lighten($bg-color, 5%) !important
 
 .tag
@@ -39,6 +44,18 @@ section
 
 pre
     padding: 1rem
+
+.options .row
+    //border: 1px solid #eee
+
+    &:nth-child(odd)
+        background-color: darken($bg-color, 5%)
+
+    div
+        padding: 1rem
+
+        &:first-child
+            text-align: center
 
 @media (min-width: $desktop-size)
     main

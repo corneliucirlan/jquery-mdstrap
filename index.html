@@ -8,9 +8,6 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous" />
 
-        <!-- jQuery Mobile -->
-        <!-- <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
-
         <!-- PrismJS CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" />
 
@@ -30,10 +27,10 @@
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">&#9776;</button>
 
                     <div class="nav navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">Features</a>
-                        <a class="nav-item nav-link" href="#">Pricing</a>
-                        <a class="nav-item nav-link" href="#">About</a>
+                        <a class="nav-item nav-link active" href="#about">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#instalation">Instalation</a>
+                        <a class="nav-item nav-link" href="#options">Options</a>
+                        <a class="nav-item nav-link" href="#development">Development</a>
                     </div>
 
                 </div>
@@ -42,19 +39,19 @@
 
         <main class="container-fluid">
 
-                <!-- Plugin Description -->
-                <section class="row">
+                <!-- Description -->
+                <section class="row" id="about">
                     <div class="col-xs-12">
                         <h2>About </h2>
                         jQuery mdStrap plugin creates a side menu for smartphones or other handheld devices. It's built based on Twitter Bootstrap's framework version 4 (currently alpha 2).
                     </div>
                 </section>
 
-                <!-- Plugin Installation -->
-                <section class="row">
+                <!-- Installation -->
+                <section class="row" id="instalation">
                     <div class="col-xs-12">
                         <h2>Plugin installation</h2>
-                        <p>You'll have to include the CSS in the <samp>&lt;head&gt;</samp> and JavaScript just before your <samp>&lt;/body&gt;</samp> of your project and that's it.</p>
+                        <p>First, you'll have to include the necessary CSS stylesheets into the <code class="language-markup">&lt;head&gt;</code> section.</p>
                         <pre class="language-markup">
                             <code class="language-markup">
   &lt;!-- Bootstrap CSS --&gt;
@@ -65,64 +62,93 @@
                             </code>
                         </pre>
 
+                        <p>Second, you'll have to add the JS just before the closing <code class="language-markup">&lt;/body&gt;</code> tag. Being a jQuery plugin, don't forget to add the jQuery library before.</p>
+                        <pre class="language-markup">
+                            <code class="language-markup">
+  &lt;!-- jQuery library --&gt;
+&lt;script src="//code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+
+  &lt;!-- jQuery mdStrap --&gt;
+&lt;script src="jquery-mdstrap.js"&gt;&lt;/script&gt;
+                            </code>
+                        </pre>
+
+                        <p>And that's it.</p>
+                    </div>
+
+                    <h3>Pre-Processors</h3>
+                    <p>If you are working with CSS pre-processors, you can <code class="language-sass">@import</code> the style into your project for better organization.</p>
+                    <pre><code class="language-sass">@import '/path/to/jquery-mdstrap'</code></pre>
+                    As of this moment, only the SASS version is available.
+                </section>
+
+                <!-- Usage -->
+                <section class="row" id="usage">
+                    <div class="col-xs-12">
+                        <h2>Usage</h2>
+                        <p>To enable the plugin, you'll just need to call the function on the element containing the navigation.</p>
+                        <pre>
+                            <code class="language-javascript">
+jQuery(document).ready(function($) {
+
+    // Call with default params
+    $('.navbar-nav').mdStrap();
+
+    // Call with custom params
+    $('.navba-rnav').mdStrap({
+        'key1'    => 'value1',
+        'key2'    => 'value2',
+    });
+
+});
+                            </code>
+                        </pre>
                     </div>
                 </section>
 
-                <!-- Plugin Options -->
-                <section class="row">
+                <!-- Options -->
+                <section class="row" id="options">
                     <div class="col-xs-12">
                         <h2>Options</h2>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Type/Default</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
 
-                            <tbody>
+                        <div class="options">
 
-                                <!-- Fixed Top -->
-                                <tr>
-                                    <td><samp>fixedTop</samp></td>
-                                    <td>Bool (<samp>true</samp> by default)</td>
-                                    <td>Setting it to true allowes you to customise the appearence of the menu when scrolling. Usually set only when <samp>.navbar-fixed-top</samp> class is present.</td>
-                                </tr>
+                            <!-- Fixed top -->
+                            <div class="row">
+                                <div class="col-xs-3"><samp>fixedTop</samp></div>
+                                <div class="col-xs-3">Bool (<samp>true</samp> by default)</div>
+                                <div class="col-xs-6">Setting it to true allowes you to customise the appearence of the menu when scrolling. Usually set only when <samp>.navbar-fixed-top</samp> class is present.</div>
+                            </div>
 
-                                <!-- Menu Trigger -->
-                                <tr>
-                                    <td><samp>menuTrigger</samp></td>
-                                    <td>CSS class (<samp>navbar-toggler</samp> by default)</td>
-                                    <td>The class for the button that will trigger the menu when on mobile devices.</td>
-                                </tr>
+                            <!-- Menu trigger -->
+                            <div class="row">
+                                <div class="col-xs-3"><samp>menuTrigger</samp></div>
+                                <div class="col-xs-3">CSS class (<samp>navbar-toggler</samp> by default)</div>
+                                <div class="col-xs-6">The class for the button that will trigger the menu when on mobile devices.</div>
+                            </div>
 
-                                <!-- Scroll Value -->
-                                <tr>
-                                    <td><samp>scrollValue</samp></td>
-                                    <td>integer (<sam>10</sam> by default)</td>
-                                    <td>If <samp>fixedTop</samp> is set to <samp>true</samp>, this is required to trigger the necessary class for stylize the navbar.</td>
-                                </tr>
+                            <!-- Scoll value -->
+                            <div class="row">
+                                <div class="col-xs-3"><samp>scrollValue</samp></div>
+                                <div class="col-xs-3">integer (<sam>10</sam> by default)</div>
+                                <div class="col-xs-6">If <samp>fixedTop</samp> is set to <samp>true</samp>, this is required to trigger the necessary class for stylize the navbar.</div>
+                            </div>
 
-                                <!-- Menu Break Point -->
-                                <tr>
-                                    <td><samp>mobileMenuBreak</samp></td>
-                                    <td>integer (<samp>992</samp> by default)</td>
-                                    <td>In <samp>px</samp>, define the width breakpoint on which the mobile version of the menu kicks in.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- <p>Suspendisse rhoncus urna a nulla cursus pharetra. Ut ullamcorper tempor orci, a auctor velit tempor in. Duis ac lectus odio. Aliquam a condimentum lorem. Duis risus libero, finibus quis porttitor eget, gravida in leo. Nulla a venenatis neque. Vivamus ac fringilla nisl. Nam egestas condimentum neque, eget vestibulum massa pulvinar in. In elementum erat sapien, quis efficitur nunc vehicula at. Quisque vel nibh dictum, euismod nibh et, fermentum ipsum.</p> -->
+                            <!-- Mobile menu break -->
+                            <div class="row">
+                                <div class="col-xs-3"><samp>mobileMenuBreak</samp></div>
+                                <div class="col-xs-3">integer (<samp>992</samp> by default)</div>
+                                <div class="col-xs-6">In <samp>px</samp>, define the width breakpoint on which the mobile version of the menu kicks in.</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Other ... -->
-                <!-- <section class="row">
-                    <div class="col-xs-12">
-                        <p>Aliquam vitae ultrices tellus, quis tristique nisl. Donec non mi nec neque porttitor tincidunt. In bibendum ex dignissim semper semper. Duis condimentum viverra mollis. Praesent tortor diam, tempus eu leo quis, iaculis bibendum tellus. Maecenas condimentum mollis felis, eu vestibulum erat feugiat ac. Mauris tempor, lorem ac fermentum consectetur, nibh tortor luctus lorem, sit amet imperdiet turpis ipsum vitae lacus. Sed a sollicitudin quam, ac vehicula leo. Maecenas non dui egestas, interdum diam sed, volutpat elit. Phasellus rhoncus enim sed elit convallis molestie. Duis tempus ex quis ornare varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec mollis velit. Pellentesque sit amet lacus aliquet, euismod odio sit amet, laoreet massa. Sed ac molestie lacus, ac sollicitudin nisl.</p>
-                    </div>
-                </section> -->
-
+                <!-- Development -->
+                <section class="row" id="development">
+                    <h2>Development</h2>
+                    <p>This plugin is in continuous development, so expect changes to occur. To get the latest changes, visit this page and the repo itself at <a href="https://www.github.com/corneliucirlan/mdstrap" target="blank">https://www.github.com/corneliucirlan/mdstrap</a></p>
+                </section>
         </main>
 
         <!-- jQuery -->
@@ -132,20 +158,36 @@
         <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
         <!-- PrismJS -->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/plugins/unescaped-markup/prism-unescaped-markup.min.css" />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-core.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-markup.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-javascript.min.js"></script>
+        <link rel="stylesheet" href="libs/prism/prism.css" />
+        <script src="libs/prism/prism.js"></script>
 
         <!-- jQuery mdStrip -->
         <script src="jquery-mdstrap.js" defer></script>
 
         <script>
-            $(document).ready(function() {
+            jQuery(document).ready(function($) {
 
                 $('.navbar-nav').mdStrap();
 
+                smoothScroll(300);
+
             });
+
+            // smoothScroll function is applied from the document ready function
+            function smoothScroll (duration) {
+            	$('a[href^="#"]').on('click', function(event) {
+
+            	    var target = $( $(this).attr('href'));
+
+                    if (target.length)
+                    {
+            	        event.preventDefault();
+            	        $('html, body').animate({
+            	            scrollTop: target.offset().top
+            	        }, duration);
+            	    }
+            	});
+            }
 
         </script>
     </body>

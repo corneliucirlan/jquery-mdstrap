@@ -9,6 +9,7 @@ header {
   position: relative;
   overflow: hidden;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 header nav {
@@ -28,6 +29,11 @@ main {
 }
 
 pre {
+  position: relative;
+  z-index: -1;
+}
+
+code, pre {
   background-color: #ccd7d9 !important;
 }
 
@@ -41,6 +47,18 @@ section {
 
 pre {
   padding: 1rem;
+}
+
+.options .row:nth-child(odd) {
+  background-color: #aebfc3;
+}
+
+.options .row div {
+  padding: 1rem;
+}
+
+.options .row div:first-child {
+  text-align: center;
 }
 
 @media (min-width: 992px) {

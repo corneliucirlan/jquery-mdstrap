@@ -125,6 +125,7 @@
 
         // Close menu when overlay clicked
         $('.' + internal.overlay).on('click', function(event) {
+            console.log(event);
             closeMobileMenu();
         });
 
@@ -135,7 +136,7 @@
 
         // Animate mobile menu
         $('.' + settings.menuTrigger).on('click', function(event) {
-            event.preventDefault();
+            event.defaultPrevented;
 
             toggleOverlay();
 
