@@ -143,6 +143,8 @@
             $menu.css(internal.menu.enableCss).animate(internal.menu.enableAnimate);
 
             $menuParent.removeClass(internal.fixedTop).css(internal.disablePointerEvents);
+
+            $menu.css(internal.enablePointerEvents);
         });
 
         // Slide out menu on touchscreen devices
