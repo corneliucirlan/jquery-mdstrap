@@ -24,6 +24,9 @@
             'menuTrigger'       : 'navbar-toggler',
             'scrollValue'       : '10',
             'mobileMenuBreak'   : '992',
+
+            // debugging
+            'debug'             : false,
         };
 
         // Various internal options/classes
@@ -69,7 +72,7 @@
             toggleFixedTop();
 
             // Debugging ...
-            debugging();
+            if (settings.debug === true) debugging();
         };
 
         $(window).on('scroll', function(event) {
