@@ -1,0 +1,34 @@
+{
+  "name": "jquery-mdstrap",
+  "homepage": "https://github.com/corneliucirlan/mdstrap",
+  "authors": [
+    "Corneliu Cîrlan <corneliu@corneliucirlan.com>"
+  ],
+  "description": "jQuery plugin to mimic the Material Design mobile menu, built on top of Bootstrap",
+  "main": [
+    "js/jquery-mdstrap.js",
+    "css/jquery-mdstrap.sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "1.10.2",
+    "bootstrap": "v4.0.0-alpha.5",
+    "prism": "Prism#^1.6.0",
+    "jquery-mobile-bower": "^1.4.5"
+  },
+  "keywords": [
+    "jquery",
+    "mobile",
+    "menu",
+    "bootstrap",
+    "responsive",
+    "menu"
+  ]
+}

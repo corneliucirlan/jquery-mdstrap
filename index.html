@@ -5,13 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>jQuery mdStrip</title>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous" />
-
-        <!-- PrismJS CSS -->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" />
-
-        <!-- Menu Design -->
         <link rel="stylesheet" href="css/style.css" />
     </head>
 
@@ -96,8 +89,8 @@ jQuery(document).ready(function($) {
 
     // Call with custom params
     $('.navba-rnav').mdStrap({
-        'key1'    => 'value1',
-        'key2'    => 'value2',
+        'key1'    =&gt; 'value1',
+        'key2'    =&gt; 'value2',
     });
 
 });
@@ -151,44 +144,7 @@ jQuery(document).ready(function($) {
                 </section>
         </main>
 
-        <!-- jQuery -->
-        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-
-        <!-- jQuery Mobile -->
-        <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-        <!-- PrismJS -->
-        <link rel="stylesheet" href="libs/prism/prism.css" />
-        <script src="libs/prism/prism.js"></script>
-
-        <!-- jQuery mdStrip -->
-        <script src="jquery-mdstrap.js" defer></script>
-
-        <script>
-            jQuery(document).ready(function($) {
-
-                $('.navbar-nav').mdStrap();
-
-                smoothScroll(300);
-
-            });
-
-            // smoothScroll function is applied from the document ready function
-            function smoothScroll (duration) {
-            	$('a[href^="#"]').on('click', function(event) {
-
-            	    var target = $( $(this).attr('href'));
-
-                    if (target.length)
-                    {
-            	        event.preventDefault();
-            	        $('html, body').animate({
-            	            scrollTop: target.offset().top
-            	        }, duration);
-            	    }
-            	});
-            }
-
-        </script>
+        <!-- JavaScript -->
+        <script src="js/functions-dist.js" defer></script>
     </body>
 </html>

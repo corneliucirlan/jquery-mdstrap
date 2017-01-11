@@ -37,3 +37,10 @@ GitHub.sublime-settings
 
 ### Prepros ###
 prepros.cfg
+prepros-6.config
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
