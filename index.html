@@ -3,148 +3,200 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>jQuery mdStrip</title>
+        <title>jQuery mdSrap</title>
 
         <link rel="stylesheet" href="css/style.css" />
-    </head>
 
+    </head>
     <body>
 
         <!-- Header -->
         <header>
-            <nav class="navbar navbar-fixed-top navbar-full navbar-light">
+            <nav class="navbar fixed-top navbar-inverse bg-primary">
 
                 <div class="container-fluid">
 
-                    <!-- Navigation toggle -->
-                    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">&#9776;</button>
+                    <!-- Navbar toggle -->
+                    <button class="navbar-toggler navbar-toggler-left" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                    <div class="nav navbar-nav">
-                        <a class="nav-item nav-link active" href="#about">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#instalation">Instalation</a>
-                        <a class="nav-item nav-link" href="#options">Options</a>
-                        <a class="nav-item nav-link" href="#development">Development</a>
-                    </div>
+                    <!-- Brand -->
+                    <h1 class="navbar-brand">jQuery mdStrap</h1>
 
+                    <!-- Main menu -->
+                    <ul class="navbar-nav navbar-nav-left">
+                        <li class="nav-item active"><a class="nav-link" href="#about">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#instalation">Instalation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#options">Options</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#development">Development</a></li>
+                    </ul>
                 </div>
             </nav>
         </header>
 
         <main class="container-fluid">
 
-                <!-- Description -->
-                <section class="row" id="about">
-                    <div class="col-xs-12">
-                        <h2>About </h2>
-                        jQuery mdStrap plugin creates a side menu for smartphones or other handheld devices. It's built based on Twitter Bootstrap's framework version 4 (currently alpha 2).
-                    </div>
-                </section>
+            <!-- Description -->
+            <section class="row" id="about">
+                <div class="col">
+                    <h2>About</h2>
+                    <p>jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design. Current version (2.0) is using a alpha version of Bootstrap - version 4.0.0-alpha6.</p>
+                </div>
+            </section>
 
-                <!-- Installation -->
-                <section class="row" id="instalation">
-                    <div class="col-xs-12">
-                        <h2>Plugin installation</h2>
-                        <p>First, you'll have to include the necessary CSS stylesheets into the <code class="language-markup">&lt;head&gt;</code> section.</p>
-                        <pre class="language-markup">
-                            <code class="language-markup">
-  &lt;!-- Bootstrap CSS --&gt;
-&lt;link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" /&gt;
+            <!-- Installation -->
+            <section class="row" id="instalation">
+                <div class="col">
+                    <h2>Instalation</h2>
+                    <p>The install process is relativelly easy, regardless of which installation method you choose. The end result will be the same.</p>
+                    <h3>Using Bower</h3>
+                    <pre class="language-powershell"><code>$ bower install jquery-mdstrap</code></pre>
+                    <p>This command will install the plugin files into the default <code class="language-markup">bower_components/</code> folder. You will then find the necessary files into the <code class="language-markup">dist/</code> folder.</p>
+                    <h3>Manual installation</h3>
+                    <p>If you don't feel comfortable with using Bower, you can install the plugin manually. <a href="https://github.com/corneliucirlan/mdstrap/releases" target="_blank">Download from here</a> in a <code class="language-markup">.zip</code> format and unzip the file. Place the contents of the <code class="language-markup">dist/</code> folder into your project.</p>
 
-  &lt;!-- mdStrap Menu --&gt;
-&lt;link rel="stylesheet" href="css/mdstrap.css" /&gt;
-                            </code>
-                        </pre>
+                    <p>No matter what method you've chosen, you will now have to include the plugin's files into your project.</p>
+                    <pre class="language-markup">
+                        <code>
+&lt;!-- Bootstrap CSS --&gt;
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" /&gt;
 
-                        <p>Second, you'll have to add the JS just before the closing <code class="language-markup">&lt;/body&gt;</code> tag. Being a jQuery plugin, don't forget to add the jQuery library before.</p>
-                        <pre class="language-markup">
-                            <code class="language-markup">
-  &lt;!-- jQuery library --&gt;
+&lt;!-- jQuery mdStrap --&gt;
+&lt;link rel="stylesheet" href="path/to/jquery-mdstrap.min.css" /&gt;
+
+&lt;!-- jQuery library --&gt;
 &lt;script src="//code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
 
-  &lt;!-- jQuery mdStrap --&gt;
-&lt;script src="jquery-mdstrap.js"&gt;&lt;/script&gt;
-                            </code>
-                        </pre>
+&lt;!-- jQuery mdStrap --&gt;
+&lt;script src="jquery-mdstrap.min.js"&gt;&lt;/script&gt;
+                        </code>
+                    </pre>
+                    <p>It is recommended to load all JavaScript files just before the closing <code class="language-markup">&lt;/body&gt;</code> tag for better performance, but this is not a requirement. Just don't forget to add the necessary dependencies before the plugin files.</p>
 
-                        <p>And that's it.</p>
+                    <h4>Source files</h4>
+                    <p>If you use SASS in your development process, this plugin comes with the <code class="language-sass">.sass</code> source files. Just include them into your project and you're done (on the CSS part).</p>
+                    <pre class="lanauge-scss"><code>@import "/path/to/source/jquery-mdstrap"</code></pre>
+                    <p>If using SASS for development, it is actually the recoomended method as it reduces the number of HTTP requests and makes the page load faster.</p>
+                </div>
+            </section>
 
-                        <h3>Pre-Processors</h3>
-                        <p>If you are working with CSS pre-processors, you can <code class="language-sass">@import</code> the style into your project for better organization.</p>
-                        <pre><code class="language-sass">@import '/path/to/jquery-mdstrap'</code></pre>
-                        As of this moment, only the SASS version is available.
-                    </div>
-                </section>
+            <!-- Usage -->
+            <section class="row" id="usage">
+                <div class="col">
+                    <h2>Usage</h2>
+                    <p>First, add the navigation mockup into your project. Something like this...</p>
+                    <pre class="language-markup">
+                        <code>
+&lt;nav class="navbar fixed-top navbar-inverse bg-primary"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;!-- Navbar toggle --&gt;
+        &lt;button class="navbar-toggler navbar-toggler-left" type="button"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
 
-                <!-- Usage -->
-                <section class="row" id="usage">
-                    <div class="col-xs-12">
-                        <h2>Usage</h2>
-                        <p>To enable the plugin, you'll just need to call the function on the element containing the navigation.</p>
-                        <pre>
-                            <code class="language-javascript">
+        &lt;!-- Brand --&gt;
+        &lt;h1 class="navbar-brand"&gt;jQuery mdStrap&lt;/h1&gt;
+
+        &lt;!-- Main menu --&gt;
+        &lt;ul class="navbar-nav navbar-nav-left"&gt;
+            &lt;li class="nav-item active"&gt;&lt;a class="nav-link" href="#about"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#instalation"&gt;Instalation&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#options"&gt;Options&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#development"&gt;Development&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+                        </code>
+                    </pre>
+                    <p>After that, call the plugin in a separate JavaScript file or at the bottom of you page (after the plugin's own JS script).</p>
+                    <pre class="language-javascript">
+                        <code>
 jQuery(document).ready(function($) {
 
     // Call with default params
-    $('.navbar-nav').mdStrap();
+    $('.navbar-nav-left').mdStrap();
 
     // Call with custom params
-    $('.navba-rnav').mdStrap({
-        'key1'    =&gt; 'value1',
-        'key2'    =&gt; 'value2',
+    $('.navba-rnav-right').mdStrap({
+        'menuTrigger'    =&gt; '.navbar-toggler-right',
     });
 
 });
-                            </code>
-                        </pre>
-                    </div>
-                </section>
+                        </code>
+                    </pre>
+                </div>
+            </section>
 
-                <!-- Options -->
-                <section class="row" id="options">
-                    <div class="col-xs-12">
-                        <h2>Options</h2>
+            <!-- Options -->
+            <section class="row" id="options">
+                <div class="col">
+                    <h2>Options</h2>
+                    <table class="table table-responsive table-hover">
+                        <thead>
+                            <tr>
+                                <th>Setting</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="language-markup">fixedTop</code></td>
+                                <td><code class="language-markup">true</code></td>
+                                <td>Specify if the navigation is fixed to the top.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-markup">menuTrigger</code></td>
+                                <td><code class="language-markup">.navbar-toggler-left</code></td>
+                                <td>The class that triggers the menu when clicked.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-markup">scrollValue</code></td>
+                                <td><code class="language-markup">10</code></td>
+                                <td>The value on which the navbar gets a box-shadow effect. Necessary only when <code class="language-markup">fixedTop</code> is set to <code class="language-markup">true</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-markup">debug</code></td>
+                                <td><code class="language-markup">false</code></td>
+                                <td>Logs various plugin related messages/settings. Recommended only when asked by the developer or facing with erros generated by the plugin.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-                        <div class="options">
-
-                            <!-- Fixed top -->
-                            <div class="row">
-                                <div class="col-xs-3"><samp>fixedTop</samp></div>
-                                <div class="col-xs-3">Bool (<samp>true</samp> by default)</div>
-                                <div class="col-xs-6">Setting it to true allowes you to customise the appearence of the menu when scrolling. Usually set only when <samp>.navbar-fixed-top</samp> class is present.</div>
-                            </div>
-
-                            <!-- Menu trigger -->
-                            <div class="row">
-                                <div class="col-xs-3"><samp>menuTrigger</samp></div>
-                                <div class="col-xs-3">CSS class (<samp>navbar-toggler</samp> by default)</div>
-                                <div class="col-xs-6">The class for the button that will trigger the menu when on mobile devices.</div>
-                            </div>
-
-                            <!-- Scoll value -->
-                            <div class="row">
-                                <div class="col-xs-3"><samp>scrollValue</samp></div>
-                                <div class="col-xs-3">integer (<sam>10</sam> by default)</div>
-                                <div class="col-xs-6">If <samp>fixedTop</samp> is set to <samp>true</samp>, this is required to trigger the necessary class for stylize the navbar.</div>
-                            </div>
-
-                            <!-- Mobile menu break -->
-                            <div class="row">
-                                <div class="col-xs-3"><samp>mobileMenuBreak</samp></div>
-                                <div class="col-xs-3">integer (<samp>992</samp> by default)</div>
-                                <div class="col-xs-6">In <samp>px</samp>, define the width breakpoint on which the mobile version of the menu kicks in.</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Development -->
-                <section class="row" id="development">
+            <!-- Development -->
+            <section class="row" id="development">
+                <div class="col">
                     <h2>Development</h2>
-                    <p>This plugin is in continuous development, so expect changes to occur. To get the latest changes, visit this page and the repo itself at <a href="https://www.github.com/corneliucirlan/mdstrap" target="blank">https://www.github.com/corneliucirlan/mdstrap</a></p>
-                </section>
+                    This project is in continuously development.
+                </div>
+            </section>
         </main>
 
+        <!-- Footer -->
+        <footer class="bg-primary">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <p>This plugin is developed and maintained by <a href="https://www.corneliucirlan.com/" target="_blank">Corneliu C&icirc;rlan</a></p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="row">
+                            <div class="col text-center"><a target="_blank" title="Check out my website" href="https://www.corneliucirlan.com"><i class="fa fa-2x fa-globe"></i></a></div>
+                            <div class="col text-center"><a target="_blank" title="Check out my Github page" href="https://www.github.com/corneliucirlan"><i class="fa fa-2x fa-github"></i></a></div>
+                            <div class="col text-center"><a target="_blank" title="Check out my Facebook page" href="https://www.facebook.com/corneliucirlan"><i class="fa fa-2x fa-facebook"></i></a></div>
+                            <div class="col text-center"><a target="_blank" title="Check out my Instagram page" href="https://www.instagram.com/corneliucirlan"><i class="fa fa-2x fa-instagram"></i></a></div>
+                            <div class="col text-center"><a target="_blank" title="Check out my Twitter page" href="https://twitter.com/corneliucirlan"><i class="fa fa-2x fa-twitter"></i></a></div>
+                            <div class="col text-center"><a target="_blank" title="Check out my Linkedin page" href="https://www.linkedin.com/in/corneliucirlan"><i class="fa fa-2x fa-linkedin"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
         <!-- JavaScript -->
-        <script src="js/functions-dist.js" defer></script>
+        <script src="js/functions-dist.js"></script>
     </body>
 </html>

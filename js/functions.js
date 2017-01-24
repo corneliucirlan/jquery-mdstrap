@@ -1,22 +1,29 @@
 // jQuery
 //@prepros-prepend "../bower_components/jquery/jquery.js"
 
-// jQuery Mobile
-//@prepros-prepend "../bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.5.js"
-
 // PrismJS
 //@prepros-prepend "../bower_components/prism/prism.js"
 
 // jQuery mdStrap
-//@prepros-prepend "../js/jquery-mdstrap.js"
+//@prepros-prepend "../src/js/jquery-mdstrap.js"
 
 jQuery(document).ready(function($) {
 
-    $('.navbar-nav').mdStrap();
+    //$('.navbar-nav-left').mdStrap();
+    $('.navbar-nav-left').mdStrap();
 
+    activateMenuItem();
     smoothScroll(300);
 
 });
+
+// Activate menu item on click
+function activateMenuItem()
+{
+    $('a[href^="#"]').on('click', function() {
+        $(this).parents('li.nav-item').addClass('active').siblings().removeClass('active');
+    });
+}
 
 // smoothScroll function is applied from the document ready function
 function smoothScroll (duration) {

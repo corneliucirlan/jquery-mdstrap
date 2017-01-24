@@ -1,61 +1,43 @@
-$bg-color : #bdcbce
-$body-color : #eee
-
-$desktop-size: 992px
-
 body
-    background-color: $bg-color
-    color: $body-color
-    text-align: justify
-    font-family: Helvetica
+    background-color: $gray-lighter
 
-header
-    position: relative
-    overflow: hidden
-    height: auto
+.container-fluid
+    max-width: $max-width
+    width: 100%
+    margin: 0 auto
+
+main.container-fluid
+    margin-top: 4rem
     margin-bottom: 2rem
 
-    nav
-        position: relative
-        width: 100%
+    .row
+        margin-top: $spacer-y * 3
 
-        .container-fluid
-            max-width: $desktop-size
-            margin: 0 auto
+        a
+            color: $brand-primary
 
-main
-    width: 100%
-    padding: 2rem
-    color: #444
+            &:hover
+                color: darken($brand-primary, 10%)
 
-pre
-    position: relative
-    z-index: -1
+.btn-outline-secondary:hover
+    color: darken($link-color, 30%)
+    border-color: darken($link-color, 30%)
+    background: none
 
-code, pre
-    background-color: lighten($bg-color, 5%) !important
 
-.tag
-    font-size: 100%
+footer
+    color: $link-color
 
-section
-    padding: 1rem 0
+    .btn-link
+        transition: all ease-in-out 200ms
+        color: $link-color
 
-pre
-    padding: 1rem
+        &:hover
+            color: darken($link-color, 30%)
+            text-decoration: none
 
-.options .row
-    //border: 1px solid #eee
+    padding: 2rem 0
 
-    &:nth-child(odd)
-        background-color: darken($bg-color, 5%)
-
-    div
-        padding: 1rem
-
-        &:first-child
-            text-align: center
-
-@media (min-width: $desktop-size)
-    main
-        max-width: $desktop-size
+@include media-breakpoint-up(md)
+    main.container-fluid
+        margin-top: 10rem

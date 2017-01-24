@@ -4,10 +4,22 @@
   "authors": [
     "Corneliu Cîrlan <corneliu@corneliucirlan.com>"
   ],
-  "description": "jQuery plugin to mimic the Material Design mobile menu, built on top of Bootstrap",
+  "description": "jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design",
   "main": [
-    "js/jquery-mdstrap.js",
-    "css/jquery-mdstrap.sass"
+    "dist/css/jquery-mdstrap.css",
+    "dist/js/jquery-mdstrap.js"
+  ],
+  "keywords": [
+    "jquery",
+    "bootstrap",
+    "material",
+    "design",
+    "plugin",
+    "google",
+    "mobile",
+    "menu",
+    "responsive",
+    "menu"
   ],
   "license": "MIT",
   "ignore": [
@@ -18,17 +30,9 @@
     "tests"
   ],
   "devDependencies": {
-    "jquery": "1.10.2",
-    "bootstrap": "v4.0.0-alpha.5",
+    "bootstrap": "v4.0.0-alpha.6",
     "prism": "Prism#^1.6.0",
-    "jquery-mobile-bower": "^1.4.5"
-  },
-  "keywords": [
-    "jquery",
-    "mobile",
-    "menu",
-    "bootstrap",
-    "responsive",
-    "menu"
-  ]
+    "jquery-mobile-bower": "^1.4.5",
+    "components-font-awesome": "^4.7.0"
+  }
 }
