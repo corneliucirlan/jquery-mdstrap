@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.0.0
+ * @version 2.0.1
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
