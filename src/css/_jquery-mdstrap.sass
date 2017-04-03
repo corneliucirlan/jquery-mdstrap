@@ -3,16 +3,13 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
 // Various Bootstrap background colors
-$mds-bg-names: bg-primary, bg-success, bg-info, bg-warning, bg-danger, bg-inverse
+$mds-bg-names: ".bg-primary", ".bg-success", ".bg-info", ".bg-warning", ".bg-danger", ".bg-inverse"
 $mds-bg-colors: $brand-primary, $brand-success, $brand-info, $brand-warning, $brand-danger, $brand-inverse
-
-// Mobile menu breakpoint
-$desktop-size: 992px
 
 .mds-overlay
 	display: none
@@ -28,117 +25,137 @@ $desktop-size: 992px
 
 .mds-fixed-top
 	box-shadow: 0 2px 5px 0 rgba(black, 0.16), 0  2px 10px 0 rgba(black, 0.12)
-	transition: all 0.3s ease-in-out
+	transition: all 200ms ease-in-out
 
 .mds-disable-scroll
 	overflow: hidden
 	height: 100%
 
-header nav.navbar
-	padding: 0
-	pointer-events: all
-	flex-direction: row
+.navbar
+    padding: 0
+    pointer-events: all
+    flex-direction: row
 
-	.container-fluid
-		display: flex
-		justify-content: space-between
-		align-items: center
+    .container-fluid
+        display: inherit
 
-	.navbar-toggler
-		outline: 0
-		border: 0
-		cursor: pointer
+    // Navbar toggler
+    .navbar-toggler
+        display: none
+        cursor: pointer
+        outline: 0
+        margin: 0
+        border: 0
 
-		&.navbar-toggler-left,
-		&.navbar-toggler-right
-			position: initial
+    // Navigation menu
+    .navbar-nav
+        display: flex
+        flex-direction: row
+        position: relative
+        left: 0
+        top: 0
+        max-width: 100%
+        height: auto
+        box-shadow: none
+        color: inherit
 
-		&:active, &:focus, &:hover, &:visited
-			outline: 0
+        &.navbar-nav-left,
+        &.navbar-nav-right
+            left: inherit
+            right: inherit
 
-	.navbar-nav
-		display: none
-		position: absolute
-		top: 0
-		padding: 0
-		max-width: 13rem
-		width: 100%
-		height: 100vh
-		background-color: inherit
-		transition: all ease-in-out 200ms
-		box-shadow: 3px 0 3px rgba(black, 0.2)
-		pointer-events: all
+            // Navigation menu item
+            .nav-item
+                width: auto
+                padding: 0.5rem
 
-		&.navbar-nav-left
-			left: -100%
+                &:first-child
+                    padding-left: 0
 
-			&.mds-active
-				left: 0%
-				animation: fly-in-left 200ms
+                    .nav-link
+                        padding-left: 0
 
-		&.navbar-nav-right
-			right: -100%
+    // Toggleable modifiers
+    &.navbar-toggleable
+        @each $breakpoint in map-keys($grid-breakpoints)
+            $next: breakpoint-next($breakpoint, $grid-breakpoints)
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints)
 
-			&.navbar-nav-right
-				right: 0%
-				animation: fly-in-right 200ms
+            &#{$infix}
+                @include media-breakpoint-down($breakpoint)
+                    .container-fluid
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
 
-		.nav-item
-			display: block
-			width: 100%
-			margin: 0
-			padding: 0.5rem 2rem
-			transition: all 0.2s ease-in-out
+                    // Navbar toggler
+                    .navbar-toggler
+                        display: block
 
-	&.mds-active
-		background-color: transparent !important
-		box-shadow: none
-		pointer-events: none
+                        &.navbar-toggler-left,
+                        &.navbar-toggler-right
+                            position: initial
 
-		.navbar-nav
-			display: block
+                        &:active,
+                        &:focus,
+                        &:hover,
+                        &:visited
+                            outline: 0
 
-	@each $color in $mds-bg-names
-		$index: index($mds-bg-names, $color)
-		&.#{$color}
+                    // Navigation menu
+                    .navbar-nav
+                        display: none
+                        position: fixed
+                        padding: 0
+                        top: 0
+                        max-width: auto
+                        width: auto
+                        height: 100vh
+                        background-color: inherit
+                        transition: all ease-in-out 200ms
+                        box-shadow: 3px 0 3px rgba(black, 0.2)
+                        pointer-events: all
 
-			.navbar-nav
-				background-color: nth($mds-bg-colors, $index)
+                        &.navbar-nav-left
+                            left: -100%
 
-@media (min-width: $desktop-size)
-	header nav.navbar
-		.container-fluid
-			display: block
+                            &.mds-active
+                                left: 0%
+                                animation: fly-in-left 200ms
 
-		.navbar-toggler
-			display: none
+                        &.navbar-nav-right
+                            right: -100%
 
-		.navbar-nav
-			display: flex
-			flex-direction: row
-			position: relative
-			left: 0
-			top: 0
-			max-width: 100%
-			height: auto
-			box-shadow: none
-			//background: transparent
-			color: inherit
+                            &.mds-active
+                                right: 0%
+                                animation: fly-in-right 200ms
 
-			&.navbar-nav-left,
-			&.navbar-nav-right
-				left: inherit
-				right: inherit
+                        // Navigation menu item
+                        .nav-item
+                            display: block
+                            width: 100%
+                            margin: 0
+                            padding: 0.5rem $spacer * 2
+                            transition: all ease-in-out 200ms
 
-			.nav-item
-				width: auto
-				padding: 0.5rem
+                            &:first-child
+                                padding-left: $spacer * 2
 
-				&:first-child
-					padding-left: 0
+                    &.mds-active
+                        visibility: hidden
+                        box-shadow: none
+                        pointer-events: none
 
-				.nav-link
-					//color: $link-color
+                        .navbar-nav
+                            display: block
+                            visibility: visible
+
+                        @each $color in $mds-bg-names
+                            $index: index($mds-bg-names, $color)
+
+                            &#{$color}
+                                .navbar-nav
+                                    background-color: nth($mds-bg-colors, $index)
 
 @keyframes fly-in-left
 	0%

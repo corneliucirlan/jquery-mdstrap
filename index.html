@@ -31,7 +31,7 @@
 
         <!-- Header -->
         <header>
-            <nav class="navbar fixed-top navbar-inverse bg-primary">
+            <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary">
 
                 <div class="container-fluid">
 
@@ -60,7 +60,7 @@
             <section class="row" id="about">
                 <div class="col">
                     <h2>About</h2>
-                    <p>jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design. Current version (2.0) is using a alpha version of Bootstrap - version 4.0.0-alpha6.</p>
+                    <p>jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design. Current version (2.1) is using a alpha version of Bootstrap - version 4.0.0-alpha6.</p>
                 </div>
             </section>
 
@@ -95,7 +95,7 @@
 
                     <h4>Source files</h4>
                     <p>If you use SASS in your development process, this plugin comes with the <code class="language-sass">.sass</code> source files. Just include them into your project and you're done (on the CSS part).</p>
-                    <pre class="lanauge-scss"><code>@import "/path/to/source/jquery-mdstrap"</code></pre>
+                    <pre class="language-sass"><code>@import "/path/to/source/jquery-mdstrap"</code></pre>
                     <p>If using SASS for development, it is actually the recoomended method as it reduces the number of HTTP requests and makes the page load faster.</p>
                 </div>
             </section>
@@ -107,7 +107,7 @@
                     <p>First, add the navigation mockup into your project. Something like this...</p>
                     <pre class="language-markup">
                         <code>
-&lt;nav class="navbar fixed-top navbar-inverse bg-primary"&gt;
+&lt;nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary"&gt;
     &lt;div class="container-fluid"&gt;
         &lt;!-- Navbar toggle --&gt;
         &lt;button class="navbar-toggler navbar-toggler-left" type="button"&gt;
@@ -128,6 +128,7 @@
 &lt;/nav&gt;
                         </code>
                     </pre>
+                    <p>Use the <code class="language-sass">.navbar-toggleable-*</code> classes to enable the mobile view at different screen widths. <a target="_blank" href="https://v4-alpha.getbootstrap.com/layout/grid/">Reference the Bootstrap documentation</a> for more details about the grid system.</p>
                     <p>After that, call the plugin in a separate JavaScript file or at the bottom of you page (after the plugin's own JS script).</p>
                     <pre class="language-javascript">
                         <code>

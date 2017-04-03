@@ -1,5 +1,5 @@
 // jQuery
-//@prepros-prepend "../bower_components/jquery/jquery.js"
+//@prepros-prepend "../bower_components/jquery/dist/jquery.js"
 
 // PrismJS
 //@prepros-prepend "../bower_components/prism/prism.js"
@@ -9,7 +9,6 @@
 
 jQuery(document).ready(function($) {
 
-    //$('.navbar-nav-left').mdStrap();
     $('.navbar-nav-left').mdStrap();
 
     activateMenuItem();

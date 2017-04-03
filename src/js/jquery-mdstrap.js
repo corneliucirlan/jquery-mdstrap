@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.0.1
+ * @version 2.1.0
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
@@ -138,15 +138,15 @@
         $body = $('body');
 
         if (isVisible)
-        {
-            $overlay.fadeOut('fast');
-            $body.removeClass(internalSettings.disableScroll);
-        }
-        else
-        {
-            $overlay.fadeIn('fast');
-            $body.addClass(internalSettings.disableScroll);
-        }
+                {
+                    $overlay.fadeOut('fast');
+                    $body.removeClass(internalSettings.disableScroll);
+                }
+            else
+                {
+                    $overlay.fadeIn('fast');
+                    $body.addClass(internalSettings.disableScroll);
+                }
     };
 
     // Close mobile menu
