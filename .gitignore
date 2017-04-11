@@ -36,7 +36,6 @@ GitHub.sublime-settings
 *.css.map
 
 ### Prepros ###
-prepros.cfg
 prepros-6.config
 
 ### Bower ###

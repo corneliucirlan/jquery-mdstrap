@@ -34,12 +34,12 @@ main.container-fluid
 footer
     color: $link-color
 
-    .btn-link
-        transition: all ease-in-out 200ms
+    a
+        @include transition
         color: $link-color
 
         &:hover
-            color: darken($link-color, 30%)
+            color: darken($brand-primary, 10%)
             text-decoration: none
 
     padding: 2rem 0

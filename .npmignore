@@ -1,0 +1,6 @@
+## Ignore files needed to create the documentation
+css
+js
+img
+fonts
+index.html
