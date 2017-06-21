@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.1.2
+ * @version 2.1.4
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
@@ -122,6 +122,7 @@ $mds-bg-colors: $brand-primary, $brand-success, $brand-info, $brand-warning, $br
                             &.mds-active
                                 left: 0%
                                 animation: fly-in-left 200ms
+                                overflow-y: auto
 
                         &.navbar-nav-right
                             right: -100%
@@ -129,6 +130,7 @@ $mds-bg-colors: $brand-primary, $brand-success, $brand-info, $brand-warning, $br
                             &.mds-active
                                 right: 0%
                                 animation: fly-in-right 200ms
+                                overflow-y: auto
 
                         // Navigation menu item
                         .nav-item
