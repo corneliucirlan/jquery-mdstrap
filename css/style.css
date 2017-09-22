@@ -66,6 +66,7 @@ a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
 
@@ -9336,7 +9337,7 @@ pre[class*="language-"] {
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.1.4
+ * @version 2.2
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 .mds-overlay {
@@ -9382,7 +9383,7 @@ pre[class*="language-"] {
   display: none;
   cursor: pointer;
   outline: 0;
-  margin: 0;
+  margin: auto 0;
   border: 0;
 }
 
