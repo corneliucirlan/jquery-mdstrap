@@ -39,6 +39,6 @@
     "prism": "Prism#^1.6.0",
     "jquery-mobile-bower": "^1.4.5",
     "components-font-awesome": "^4.7.0",
-    "jquery": "1.12.4"
+    "jquery": "^3.2.1"
   }
 }

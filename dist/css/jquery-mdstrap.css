@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.2
+ * @version 2.3.0
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 .mds-overlay {
@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 999;
+  z-index: 900;
 }
 
 .mds-fixed-top {
@@ -168,21 +168,27 @@
   }
   .navbar.navbar-toggleable.mds-active.bg-primary .navbar-nav {
     background-color: #0275d8;
+    z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-success .navbar-nav {
     background-color: #5cb85c;
+    z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-info .navbar-nav {
     background-color: #5bc0de;
+    z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-warning .navbar-nav {
     background-color: #f0ad4e;
+    z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-danger .navbar-nav {
     background-color: #d9534f;
+    z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-inverse .navbar-nav {
     background-color: #292b2c;
+    z-index: 999;
   }
 }
 
@@ -265,21 +271,27 @@
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-primary .navbar-nav {
     background-color: #0275d8;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-success .navbar-nav {
     background-color: #5cb85c;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-info .navbar-nav {
     background-color: #5bc0de;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-warning .navbar-nav {
     background-color: #f0ad4e;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-danger .navbar-nav {
     background-color: #d9534f;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-inverse .navbar-nav {
     background-color: #292b2c;
+    z-index: 999;
   }
 }
 
@@ -362,21 +374,27 @@
   }
   .navbar.navbar-toggleable-md.mds-active.bg-primary .navbar-nav {
     background-color: #0275d8;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-success .navbar-nav {
     background-color: #5cb85c;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-info .navbar-nav {
     background-color: #5bc0de;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-warning .navbar-nav {
     background-color: #f0ad4e;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-danger .navbar-nav {
     background-color: #d9534f;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-inverse .navbar-nav {
     background-color: #292b2c;
+    z-index: 999;
   }
 }
 
@@ -459,21 +477,27 @@
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-primary .navbar-nav {
     background-color: #0275d8;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-success .navbar-nav {
     background-color: #5cb85c;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-info .navbar-nav {
     background-color: #5bc0de;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-warning .navbar-nav {
     background-color: #f0ad4e;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-danger .navbar-nav {
     background-color: #d9534f;
+    z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-inverse .navbar-nav {
     background-color: #292b2c;
+    z-index: 999;
   }
 }
 
@@ -568,26 +592,32 @@
 
 .navbar.navbar-toggleable-xl.mds-active.bg-primary .navbar-nav {
   background-color: #0275d8;
+  z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-success .navbar-nav {
   background-color: #5cb85c;
+  z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-info .navbar-nav {
   background-color: #5bc0de;
+  z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-warning .navbar-nav {
   background-color: #f0ad4e;
+  z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-danger .navbar-nav {
   background-color: #d9534f;
+  z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-inverse .navbar-nav {
   background-color: #292b2c;
+  z-index: 999;
 }
 
 @-webkit-keyframes fly-in-left {

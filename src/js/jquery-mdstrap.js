@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.2
+ * @version 2.3.0
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
@@ -15,12 +15,9 @@
 
     $.fn.mdStrap = function(options)
     {
-        // Declare function variables
-        var $menu = $(this);
-        var $menuParent = $menu.parents('nav');
-
         // Plugin default settings
         var defaults = {
+            'selector'          : '.navbar-nav-left',
             'fixedTop'          : true,
             'menuTrigger'       : '.navbar-toggler-left',
             'scrollValue'       : '10',
@@ -33,6 +30,10 @@
         var settings = defaults;
         if (options) settings = $.extend(true, {}, defaults, options);
 
+        // Declare function variables
+        var $menu = $(settings.selector);
+        var $menuParent = $menu.parents('nav');
+
         //// Various internal options/classes
         var internal = {
             'fixedTop'              : 'mds-fixed-top',
@@ -40,14 +41,13 @@
             'overlay'               : 'mds-overlay',
         };
 
-        //if ($menu.length !== 0)
-        if ($('ul' + $menu.selector).length !== 0) initialize(settings, internal, $menu, $menuParent);
-            else console.error("Menu '" + $menu.selector + "' not available.");
+        if ($menu.length !== 0) initialize(settings, internal, $menu, $menuParent);
+            else console.error("Menu '" + settings.selector + "' not available.");
 
         return this;
     };
 
-    //// Init function
+    // Init function
     function initialize(settings, internalSettings, $menu, $menuParent)
     {
         // Add overlay to document
