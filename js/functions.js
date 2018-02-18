@@ -1,15 +1,17 @@
 // jQuery
-//@prepros-prepend "../bower_components/jquery/dist/jquery.js"
+//@prepros-prepend "../node_modules/jquery/dist/jquery.js"
 
 // PrismJS
-//@prepros-prepend "../bower_components/prism/prism.js"
+//@prepros-prepend "../node_modules/prismjs/prism.js"
 
 // jQuery mdStrap
 //@prepros-prepend "../src/js/jquery-mdstrap.js"
 
 jQuery(document).ready(function($) {
 
-    $('.navbar-nav-left').mdStrap();
+    $('.navbar-nav-left').mdStrap({
+        'menuTrigger': '.navbar-toggler-left'
+    });
 
     activateMenuItem();
     smoothScroll(300);

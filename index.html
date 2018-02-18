@@ -11,18 +11,18 @@
         <meta name="description" content="Mobile menu following Material Design design built on the Bootstrap Framework." />
 
         <!-- Facebook meta tags -->
-        <meta property="og:url" content="https://corneliucirlan.github.io/mdstrap/" />
+        <meta property="og:url" content="https://corneliucirlan.github.io/jquery-mdstrap/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="jQuery mdStrap - Mobile menu for the Bootstrap framework" />
         <meta property="og:description" content="Mobile menu following Material Design design built on the Bootstrap Framework" />
-        <meta property="og:image" content="https://corneliucirlan.github.io/mdstrap/img/screenshot-top.png" />
+        <meta property="og:image" content="https://corneliucirlan.github.io/jquery-mdstrap/img/screenshot.png" />
 
         <!-- Tiwtter neta tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:creator" content="@corneliucirlan">
         <meta name="twitter:title" content="jQuery mdStrap - Mobile menu for the Bootstrap framework">
         <meta name="twitter:description" content="Mobile menu following Material Design design built on the Bootstrap Framework">
-        <meta name="twitter:image" content="https://corneliucirlan.github.io/mdstrap/img/screenshot-top.png">
+        <meta name="twitter:image" content="https://corneliucirlan.github.io/jquery-mdstrap/img/screenshot.png">
 
         <link rel="stylesheet" href="css/style.css" />
 
@@ -31,7 +31,7 @@
 
         <!-- Header -->
         <header>
-            <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary">
+            <nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-primary">
 
                 <div class="container-fluid">
 
@@ -60,7 +60,7 @@
             <section class="row" id="about">
                 <div class="col">
                     <h2>About</h2>
-                    <p>jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design. Current version (2.*) is using a alpha version of Bootstrap - version 4.0.0-alpha6.</p>
+                    <p>jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design.</p>
                 </div>
             </section>
 
@@ -81,13 +81,10 @@
                     <pre class="language-markup">
                         <code>
 &lt;!-- Bootstrap CSS --&gt;
-&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" /&gt;
-
-&lt;!-- jQuery mdStrap --&gt;
-&lt;link rel="stylesheet" href="path/to/jquery-mdstrap.min.css" /&gt;
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" /&gt;
 
 &lt;!-- jQuery library --&gt;
-&lt;script src="//code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+&lt;script src="//code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
 
 &lt;!-- jQuery mdStrap --&gt;
 &lt;script src="jquery-mdstrap.min.js"&gt;&lt;/script&gt;
@@ -109,7 +106,7 @@
                     <p>First, add the navigation mockup into your project. Something like this...</p>
                     <pre class="language-markup">
                         <code>
-&lt;nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary"&gt;
+&lt;nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-primary"&gt;
     &lt;div class="container-fluid"&gt;
         &lt;!-- Navbar toggle --&gt;
         &lt;button class="navbar-toggler navbar-toggler-left" type="button"&gt;
@@ -140,8 +137,8 @@ jQuery(document).ready(function($) {
     $('.navbar-nav-left').mdStrap();
 
     // Call with custom params
-    $('.navba-rnav-right').mdStrap({
-        'menuTrigger'    =&gt; '.navbar-toggler-right',
+    $('.navba-nav-right').mdStrap({
+        'menuTrigger' : '.navbar-toggler-right'
     });
 
 });
@@ -158,33 +155,33 @@ jQuery(document).ready(function($) {
                         <thead>
                             <tr>
                                 <th>Setting</th>
+                                <th>Type</th>
                                 <th>Default</th>
                                 <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code class="language-markup">selector</code></td>
-                                <td><code class="language-markup">.navbar-nav-left</code></td>
-                                <td>Menu to be toggled</td>
-                            </tr>
-                            <tr>
                                 <td><code class="language-markup">fixedTop</code></td>
+                                <td>boolean</td>
                                 <td><code class="language-markup">true</code></td>
                                 <td>Specify if the navigation is fixed to the top.</td>
                             </tr>
                             <tr>
                                 <td><code class="language-markup">menuTrigger</code></td>
+                                <td>CSS class</td>
                                 <td><code class="language-markup">.navbar-toggler-left</code></td>
                                 <td>The class that triggers the menu when clicked.</td>
                             </tr>
                             <tr>
                                 <td><code class="language-markup">scrollValue</code></td>
+                                <td>integer</td>
                                 <td><code class="language-markup">10</code></td>
                                 <td>The value on which the navbar gets a box-shadow effect. Necessary only when <code class="language-markup">fixedTop</code> is set to <code class="language-markup">true</code>.</td>
                             </tr>
                             <tr>
                                 <td><code class="language-markup">debug</code></td>
+                                <td>boolean</td>
                                 <td><code class="language-markup">false</code></td>
                                 <td>Logs various plugin related messages/settings. Recommended only when asked by the developer or facing with erros generated by the plugin.</td>
                             </tr>
@@ -203,11 +200,11 @@ jQuery(document).ready(function($) {
         </main>
 
         <!-- Footer -->
-        <footer class="bg-primary">
+        <footer class="bg-dark">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <p>This plugin is developed and maintained by <a href="https://www.corneliucirlan.com/" target="_blank">Corneliu C&icirc;rlan</a></p>
+                        <p>Plugin developed and maintained by <a href="https://www.corneliucirlan.com/" target="_blank">Corneliu C&icirc;rlan</a></p>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="row">

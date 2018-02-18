@@ -1,5 +1,5 @@
 body
-    background-color: $gray-lighter
+    background-color: gray("300")
 
 .container-fluid
     max-width: $max-width
@@ -17,13 +17,13 @@ main.container-fluid
     margin-bottom: 2rem
 
     .row
-        margin-top: $spacer-y * 3
+        margin-top: $spacers(5)
 
         a
-            color: $brand-primary
+            color: color("blue")
 
             &:hover
-                color: darken($brand-primary, 10%)
+                color: darken(color("blue"), 10%)
 
 .btn-outline-secondary:hover
     color: darken($link-color, 30%)
@@ -32,14 +32,14 @@ main.container-fluid
 
 
 footer
-    color: $link-color
+    color: $white
 
     a
         @include transition
-        color: $link-color
+        color: color("white")
 
         &:hover
-            color: darken($brand-primary, 10%)
+            color: darken(color("white"), 30%)
             text-decoration: none
 
     padding: 2rem 0

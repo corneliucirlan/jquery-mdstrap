@@ -33,12 +33,5 @@
     "test",
     "tests",
     "/index.html"
-  ],
-  "devDependencies": {
-    "bootstrap": "v4.0.0-alpha.6",
-    "prism": "Prism#^1.6.0",
-    "jquery-mobile-bower": "^1.4.5",
-    "components-font-awesome": "^4.7.0",
-    "jquery": "^3.2.1"
-  }
+  ]
 }

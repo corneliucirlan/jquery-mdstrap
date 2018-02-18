@@ -1,6 +1,6 @@
 {
   "name": "jquery-mdstrap",
-  "version": "2.3.0",
+  "version": "4.0.0",
   "description": "jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design",
   "main": "dist/js/jquery-mdstrap.js",
   "scripts": {
@@ -25,7 +25,15 @@
   "author": "Corneliu Cirlan <corneliu@corneliucirlan.com> (https://www.corneliucirlan.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/corneliucirlan/mdstrap/issues"
+    "url": "https://github.com/corneliucirlan/jquery-mdstrap/issues"
   },
-  "homepage": "https://corneliucirlan.github.io/mdstrap"
+  "homepage": "https://corneliucirlan.github.io/jquery-mdstrap/",
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper": "^1.12.9",
+    "popper.js": "^1.12.9",
+    "prismjs": "^1.11.0"
+  }
 }

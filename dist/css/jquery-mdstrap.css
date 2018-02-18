@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.3.0
+ * @version 4.0.0
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 .mds-overlay {
@@ -89,7 +89,7 @@
   padding-left: 0;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575.98px) {
   .navbar.navbar-toggleable .container-fluid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -122,8 +122,8 @@
     -webkit-transition: all ease-in-out 200ms;
     -o-transition: all ease-in-out 200ms;
     transition: all ease-in-out 200ms;
-    -webkit-box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
-    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     pointer-events: all;
   }
   .navbar.navbar-toggleable .navbar-nav.navbar-nav-left {
@@ -167,32 +167,40 @@
     visibility: visible;
   }
   .navbar.navbar-toggleable.mds-active.bg-primary .navbar-nav {
-    background-color: #0275d8;
+    background-color: #007bff;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable.mds-active.bg-secondary .navbar-nav {
+    background-color: #6c757d;
     z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-success .navbar-nav {
-    background-color: #5cb85c;
+    background-color: #28a745;
     z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-info .navbar-nav {
-    background-color: #5bc0de;
+    background-color: #17a2b8;
     z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-warning .navbar-nav {
-    background-color: #f0ad4e;
+    background-color: #ffc107;
     z-index: 999;
   }
   .navbar.navbar-toggleable.mds-active.bg-danger .navbar-nav {
-    background-color: #d9534f;
+    background-color: #dc3545;
     z-index: 999;
   }
-  .navbar.navbar-toggleable.mds-active.bg-inverse .navbar-nav {
-    background-color: #292b2c;
+  .navbar.navbar-toggleable.mds-active.bg-light .navbar-nav {
+    background-color: #f8f9fa;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable.mds-active.bg-dark .navbar-nav {
+    background-color: #343a40;
     z-index: 999;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .navbar.navbar-toggleable-sm .container-fluid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -225,8 +233,8 @@
     -webkit-transition: all ease-in-out 200ms;
     -o-transition: all ease-in-out 200ms;
     transition: all ease-in-out 200ms;
-    -webkit-box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
-    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     pointer-events: all;
   }
   .navbar.navbar-toggleable-sm .navbar-nav.navbar-nav-left {
@@ -270,32 +278,40 @@
     visibility: visible;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-primary .navbar-nav {
-    background-color: #0275d8;
+    background-color: #007bff;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable-sm.mds-active.bg-secondary .navbar-nav {
+    background-color: #6c757d;
     z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-success .navbar-nav {
-    background-color: #5cb85c;
+    background-color: #28a745;
     z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-info .navbar-nav {
-    background-color: #5bc0de;
+    background-color: #17a2b8;
     z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-warning .navbar-nav {
-    background-color: #f0ad4e;
+    background-color: #ffc107;
     z-index: 999;
   }
   .navbar.navbar-toggleable-sm.mds-active.bg-danger .navbar-nav {
-    background-color: #d9534f;
+    background-color: #dc3545;
     z-index: 999;
   }
-  .navbar.navbar-toggleable-sm.mds-active.bg-inverse .navbar-nav {
-    background-color: #292b2c;
+  .navbar.navbar-toggleable-sm.mds-active.bg-light .navbar-nav {
+    background-color: #f8f9fa;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable-sm.mds-active.bg-dark .navbar-nav {
+    background-color: #343a40;
     z-index: 999;
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .navbar.navbar-toggleable-md .container-fluid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -328,8 +344,8 @@
     -webkit-transition: all ease-in-out 200ms;
     -o-transition: all ease-in-out 200ms;
     transition: all ease-in-out 200ms;
-    -webkit-box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
-    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     pointer-events: all;
   }
   .navbar.navbar-toggleable-md .navbar-nav.navbar-nav-left {
@@ -373,32 +389,40 @@
     visibility: visible;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-primary .navbar-nav {
-    background-color: #0275d8;
+    background-color: #007bff;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable-md.mds-active.bg-secondary .navbar-nav {
+    background-color: #6c757d;
     z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-success .navbar-nav {
-    background-color: #5cb85c;
+    background-color: #28a745;
     z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-info .navbar-nav {
-    background-color: #5bc0de;
+    background-color: #17a2b8;
     z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-warning .navbar-nav {
-    background-color: #f0ad4e;
+    background-color: #ffc107;
     z-index: 999;
   }
   .navbar.navbar-toggleable-md.mds-active.bg-danger .navbar-nav {
-    background-color: #d9534f;
+    background-color: #dc3545;
     z-index: 999;
   }
-  .navbar.navbar-toggleable-md.mds-active.bg-inverse .navbar-nav {
-    background-color: #292b2c;
+  .navbar.navbar-toggleable-md.mds-active.bg-light .navbar-nav {
+    background-color: #f8f9fa;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable-md.mds-active.bg-dark .navbar-nav {
+    background-color: #343a40;
     z-index: 999;
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1199.98px) {
   .navbar.navbar-toggleable-lg .container-fluid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -431,8 +455,8 @@
     -webkit-transition: all ease-in-out 200ms;
     -o-transition: all ease-in-out 200ms;
     transition: all ease-in-out 200ms;
-    -webkit-box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
-    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     pointer-events: all;
   }
   .navbar.navbar-toggleable-lg .navbar-nav.navbar-nav-left {
@@ -476,27 +500,35 @@
     visibility: visible;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-primary .navbar-nav {
-    background-color: #0275d8;
+    background-color: #007bff;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable-lg.mds-active.bg-secondary .navbar-nav {
+    background-color: #6c757d;
     z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-success .navbar-nav {
-    background-color: #5cb85c;
+    background-color: #28a745;
     z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-info .navbar-nav {
-    background-color: #5bc0de;
+    background-color: #17a2b8;
     z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-warning .navbar-nav {
-    background-color: #f0ad4e;
+    background-color: #ffc107;
     z-index: 999;
   }
   .navbar.navbar-toggleable-lg.mds-active.bg-danger .navbar-nav {
-    background-color: #d9534f;
+    background-color: #dc3545;
     z-index: 999;
   }
-  .navbar.navbar-toggleable-lg.mds-active.bg-inverse .navbar-nav {
-    background-color: #292b2c;
+  .navbar.navbar-toggleable-lg.mds-active.bg-light .navbar-nav {
+    background-color: #f8f9fa;
+    z-index: 999;
+  }
+  .navbar.navbar-toggleable-lg.mds-active.bg-dark .navbar-nav {
+    background-color: #343a40;
     z-index: 999;
   }
 }
@@ -537,8 +569,8 @@
   -webkit-transition: all ease-in-out 200ms;
   -o-transition: all ease-in-out 200ms;
   transition: all ease-in-out 200ms;
-  -webkit-box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   pointer-events: all;
 }
 
@@ -591,32 +623,42 @@
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-primary .navbar-nav {
-  background-color: #0275d8;
+  background-color: #007bff;
+  z-index: 999;
+}
+
+.navbar.navbar-toggleable-xl.mds-active.bg-secondary .navbar-nav {
+  background-color: #6c757d;
   z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-success .navbar-nav {
-  background-color: #5cb85c;
+  background-color: #28a745;
   z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-info .navbar-nav {
-  background-color: #5bc0de;
+  background-color: #17a2b8;
   z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-warning .navbar-nav {
-  background-color: #f0ad4e;
+  background-color: #ffc107;
   z-index: 999;
 }
 
 .navbar.navbar-toggleable-xl.mds-active.bg-danger .navbar-nav {
-  background-color: #d9534f;
+  background-color: #dc3545;
   z-index: 999;
 }
 
-.navbar.navbar-toggleable-xl.mds-active.bg-inverse .navbar-nav {
-  background-color: #292b2c;
+.navbar.navbar-toggleable-xl.mds-active.bg-light .navbar-nav {
+  background-color: #f8f9fa;
+  z-index: 999;
+}
+
+.navbar.navbar-toggleable-xl.mds-active.bg-dark .navbar-nav {
+  background-color: #343a40;
   z-index: 999;
 }
 

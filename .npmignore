@@ -1,5 +1,6 @@
 ### Documentation ###
 /bower_components
+/node_modules
 /css
 /fonts
 /img
@@ -9,3 +10,4 @@
 ### Sass ###
 .sass-cache/
 *.css.map
+*.js.map

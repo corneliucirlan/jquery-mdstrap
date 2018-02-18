@@ -1,5 +1,13 @@
 ## CHANGELOG
 
+##### Version 4.0.0 (2018.02.18)
+- updated Bootstrap to v4.0.0
+- moved bower dependencies to npm
+- updated package.json
+- updated .npmignore
+- updated Documentation
+- updated screenshot
+
 ##### Version 2.3.0 (2017.09.29)
 - fixed compatibility with all versions of jQuery
 

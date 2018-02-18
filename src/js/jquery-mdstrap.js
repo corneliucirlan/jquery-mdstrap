@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 2.3.0
+ * @version 4.0.0
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
@@ -17,7 +17,6 @@
     {
         // Plugin default settings
         var defaults = {
-            'selector'          : '.navbar-nav-left',
             'fixedTop'          : true,
             'menuTrigger'       : '.navbar-toggler-left',
             'scrollValue'       : '10',
@@ -31,7 +30,7 @@
         if (options) settings = $.extend(true, {}, defaults, options);
 
         // Declare function variables
-        var $menu = $(settings.selector);
+        var $menu = $(this).hasClass('navbar-nav-left') ? $('.navbar-nav-left') : $('.navbar-nav-right');
         var $menuParent = $menu.parents('nav');
 
         //// Various internal options/classes
@@ -42,7 +41,7 @@
         };
 
         if ($menu.length !== 0) initialize(settings, internal, $menu, $menuParent);
-            else console.error("Menu '" + settings.selector + "' not available.");
+            else console.error("Menu '" + $menu + "' not available.");
 
         return this;
     };
@@ -52,7 +51,7 @@
     {
         // Add overlay to document
         if ($('div.' + internalSettings.overlay).length == 0)
-        $('body').prepend('<div class="' + internalSettings.overlay + '"></div>');
+            $('body').prepend('<div class="' + internalSettings.overlay + '"></div>');
 
         // Open menu
         openMobileMenu(settings, internalSettings, $menu, $menuParent);
