@@ -1,12 +1,3 @@
-// Max width
-$max-width: 1200px
-
-// Box shadow
-$box-shadow: 0 2px 5px rgba(0,0,0,.26)
-
-// Font Awesome
-$fa-font-path: "../fonts"
-
 //  Variables
 //
 //  Variables should follow the `$component-state-property-size` formula for
@@ -28,19 +19,19 @@ $fa-font-path: "../fonts"
 // $gray-700: #495057 !default
 // $gray-800: #343a40 !default
 // $gray-900: #212529 !default
-// $black:    #000 !default
+$black:    #000 !default
 //
 // $grays: () !default
 // $grays: map-merge((
-//   "100": $gray-100,
-//   "200": $gray-200,
-//   "300": $gray-300,
-//   "400": $gray-400,
-//   "500": $gray-500,
-//   "600": $gray-600,
-//   "700": $gray-700,
-//   "800": $gray-800,
-//   "900": $gray-900
+//   '100': $gray-100,
+//   '200': $gray-200,
+//   '300': $gray-300,
+//   '400': $gray-400,
+//   '500': $gray-500,
+//   '600': $gray-600,
+//   '700': $gray-700,
+//   '800': $gray-800,
+//   '900': $gray-900
 // ), $grays)
 
 $blue:    #0769ad
@@ -56,19 +47,19 @@ $blue:    #0769ad
 
 // $colors: () !default
 // $colors: map-merge((
-//   "blue":       $blue,
-//   "indigo":     $indigo,
-//   "purple":     $purple,
-//   "pink":       $pink,
-//   "red":        $red,
-//   "orange":     $orange,
-//   "yellow":     $yellow,
-//   "green":      $green,
-//   "teal":       $teal,
-//   "cyan":       $cyan,
-//   "white":      $white,
-//   "gray":       $gray-600,
-//   "gray-dark":  $gray-800
+//   'blue':       $blue,
+//   'indigo':     $indigo,
+//   'purple':     $purple,
+//   'pink':       $pink,
+//   'red':        $red,
+//   'orange':     $orange,
+//   'yellow':     $yellow,
+//   'green':      $green,
+//   'teal':       $teal,
+//   'cyan':       $cyan,
+//   'white':      $white,
+//   'gray':       $gray-600,
+//   'gray-dark':  $gray-800
 // ), $colors)
 
 // $primary:       $blue
@@ -82,21 +73,21 @@ $blue:    #0769ad
 //
 // $theme-colors: () !default
 // $theme-colors: map-merge((
-//   "primary":    $primary,
-//   "secondary":  $secondary,
-//   "success":    $success,
-//   "info":       $info,
-//   "warning":    $warning,
-//   "danger":     $danger,
-//   "light":      $light,
-//   "dark":       $dark
+//   'primary':    $primary,
+//   'secondary':  $secondary,
+//   'success':    $success,
+//   'info':       $info,
+//   'warning':    $warning,
+//   'danger':     $danger,
+//   'light':      $light,
+//   'dark':       $dark
 // ), $theme-colors)
 //  stylelint-enable
 //
 //  Set a specific jump point for requesting color jumps
 // $theme-color-interval:      8% !default
 //
-//  The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+//  The yiq lightness value that determines when the lightness of color changes from 'dark' to 'light'. Acceptable values are between 0 and 255.
 // $yiq-contrasted-threshold: 150 !default
 //
 //  Customize the light and dark text colors for use in our YIQ color contrast function.
@@ -156,7 +147,7 @@ $enable-shadows:            true
 //
 //  Style anchor elements.
 //
-// $link-color:                theme-color("primary") !default
+// $link-color:                theme-color('primary') !default
 // $link-decoration:           none !default
 // $link-hover-color:          darken($link-color, 15%) !default
 // $link-hover-decoration:     underline !default
@@ -181,7 +172,7 @@ $enable-shadows:            true
 //   xl: 1200px
 // ) !default
 //
-// @include _assert-ascending($grid-breakpoints, "$grid-breakpoints")
+// @include _assert-ascending($grid-breakpoints, '$grid-breakpoints')
 // @include _assert-starts-at-zero($grid-breakpoints)
 //
 //
@@ -196,7 +187,7 @@ $enable-shadows:            true
 //   xl: 1140px
 // ) !default
 //
-// @include _assert-ascending($container-max-widths, "$container-max-widths")
+// @include _assert-ascending($container-max-widths, '$container-max-widths')
 //
 //
 //  Grid columns
@@ -221,7 +212,7 @@ $enable-shadows:            true
 // $border-radius-sm:            .2rem !default
 //
 // $component-active-color:      $white !default
-// $component-active-bg:         theme-color("primary") !default
+// $component-active-bg:         theme-color('primary') !default
 //
 // $caret-width:                 .3em !default
 //
@@ -235,8 +226,8 @@ $enable-shadows:            true
 //  Font, line-height, and color for body text, headings, and more.
 //
 //  stylelint-disable value-keyword-case
-// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default
-// $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default
+// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default
+// $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default
 // $font-family-base:            $font-family-sans-serif !default
 //  stylelint-enable value-keyword-case
 //
@@ -462,7 +453,7 @@ $enable-shadows:            true
 //
 // $custom-control-indicator-checked-color:        $component-active-color !default
 // $custom-control-indicator-checked-bg:           $component-active-bg !default
-// $custom-control-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5) !default
+// $custom-control-indicator-checked-disabled-bg:  rgba(theme-color('primary'), .5) !default
 // $custom-control-indicator-checked-box-shadow:   none !default
 //
 // $custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, $input-btn-focus-box-shadow !default
@@ -472,15 +463,15 @@ $enable-shadows:            true
 // $custom-control-indicator-active-box-shadow:    none !default
 //
 // $custom-checkbox-indicator-border-radius:       $border-radius !default
-// $custom-checkbox-indicator-icon-checked:        str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23") !default
+// $custom-checkbox-indicator-icon-checked:        str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E'), '#', '%23') !default
 //
 // $custom-checkbox-indicator-indeterminate-bg:    $component-active-bg !default
 // $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default
-// $custom-checkbox-indicator-icon-indeterminate:  str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23") !default
+// $custom-checkbox-indicator-icon-indeterminate:  str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E'), '#', '%23') !default
 // $custom-checkbox-indicator-indeterminate-box-shadow: none !default
 //
 // $custom-radio-indicator-border-radius:          50% !default
-// $custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default
+// $custom-radio-indicator-icon-checked:           str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E'), '#', '%23') !default
 //
 // $custom-select-padding-y:           .375rem !default
 // $custom-select-padding-x:          .75rem !default
@@ -493,7 +484,7 @@ $enable-shadows:            true
 // $custom-select-disabled-bg:         $gray-200 !default
 // $custom-select-bg-size:             8px 10px !default // In pixels because image dimensions
 // $custom-select-indicator-color:     $gray-800 !default
-// $custom-select-indicator:           str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default
+// $custom-select-indicator:           str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E'), '#', '%23') !default
 // $custom-select-border-width:        $input-btn-border-width !default
 // $custom-select-border-color:        $input-border-color !default
 // $custom-select-border-radius:       $border-radius !default
@@ -523,15 +514,15 @@ $enable-shadows:            true
 // $custom-file-button-color:          $custom-file-color !default
 // $custom-file-button-bg:             $input-group-addon-bg !default
 // $custom-file-text: (
-//   en: "Browse"
+//   en: 'Browse'
 // ) !default
 //
 //
 //  Form validation
 // $form-feedback-margin-top:          $form-text-margin-top !default
 // $form-feedback-font-size:           $small-font-size !default
-// $form-feedback-valid-color:         theme-color("success") !default
-// $form-feedback-invalid-color:       theme-color("danger") !default
+// $form-feedback-valid-color:         theme-color('success') !default
+// $form-feedback-invalid-color:       theme-color('danger') !default
 //
 //
 //  Dropdowns
@@ -616,14 +607,14 @@ $enable-shadows:            true
 // $navbar-dark-hover-color:           rgba($white, .75) !default
 // $navbar-dark-active-color:          $white !default
 // $navbar-dark-disabled-color:        rgba($white, .25) !default
-// $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default
+// $navbar-dark-toggler-icon-bg:       str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E'), '#', '%23') !default
 // $navbar-dark-toggler-border-color:  rgba($white, .1) !default
 //
 // $navbar-light-color:                rgba($black, .5) !default
 // $navbar-light-hover-color:          rgba($black, .7) !default
 // $navbar-light-active-color:         rgba($black, .9) !default
 // $navbar-light-disabled-color:       rgba($black, .3) !default
-// $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default
+// $navbar-light-toggler-icon-bg:      str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E'), '#', '%23') !default
 // $navbar-light-toggler-border-color: rgba($black, .1) !default
 //
 //  Pagination
@@ -795,7 +786,7 @@ $enable-shadows:            true
 // $progress-border-radius:            $border-radius !default
 // $progress-box-shadow:               inset 0 .1rem .1rem rgba($black, .1) !default
 // $progress-bar-color:                $white !default
-// $progress-bar-bg:                   theme-color("primary") !default
+// $progress-bar-bg:                   theme-color('primary') !default
 // $progress-bar-animation-timing:     1s linear infinite !default
 // $progress-bar-transition:           width .6s ease !default
 //
@@ -851,7 +842,7 @@ $enable-shadows:            true
 // $breadcrumb-bg:                     $gray-200 !default
 // $breadcrumb-divider-color:          $gray-600 !default
 // $breadcrumb-active-color:           $gray-600 !default
-// $breadcrumb-divider:                "/" !default
+// $breadcrumb-divider:                '/' !default
 //
 //
 //  Carousel
@@ -870,8 +861,8 @@ $enable-shadows:            true
 //
 // $carousel-control-icon-width:       20px !default
 //
-// $carousel-control-prev-icon-bg:     str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default
-// $carousel-control-next-icon-bg:     str-replace(url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default
+// $carousel-control-prev-icon-bg:     str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E'), '#', '%23') !default
+// $carousel-control-next-icon-bg:     str-replace(url('data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E'), '#', '%23') !default
 //
 // $carousel-transition:               transform .6s ease !default
 //
@@ -900,4 +891,16 @@ $enable-shadows:            true
 //
 //  Printing
 // $print-page-size:                   a3 !default
-// $print-body-min-width:              map-get($grid-breakpoints, "lg") !default
+// $print-body-min-width:              map-get($grid-breakpoints, 'lg') !default
+//
+//
+//  Custom
+//
+// Max width
+$max-width: 1200px
+
+// Box shadow
+$box-shadow: 0 2px 5px rgba(0, 0, 0, .26)
+
+// Font Awesome
+$fa-font-path: '../fonts'

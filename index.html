@@ -11,21 +11,20 @@
         <meta name="description" content="Mobile menu following Material Design design built on the Bootstrap Framework." />
 
         <!-- Facebook meta tags -->
-        <meta property="og:url" content="https://corneliucirlan.github.io/jquery-mdstrap/" />
+        <meta property="og:url" content="'https://jquery-mdstrap.corneliucirlan.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="jQuery mdStrap - Mobile menu for the Bootstrap framework" />
         <meta property="og:description" content="Mobile menu following Material Design design built on the Bootstrap Framework" />
-        <meta property="og:image" content="https://corneliucirlan.github.io/jquery-mdstrap/img/screenshot.png" />
+        <meta property="og:image" content="'https://jquery-mdstrap.corneliucirlan.com/img/screenshot.png" />
 
         <!-- Tiwtter neta tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:creator" content="@corneliucirlan">
         <meta name="twitter:title" content="jQuery mdStrap - Mobile menu for the Bootstrap framework">
         <meta name="twitter:description" content="Mobile menu following Material Design design built on the Bootstrap Framework">
-        <meta name="twitter:image" content="https://corneliucirlan.github.io/jquery-mdstrap/img/screenshot.png">
+        <meta name="twitter:image" content="'https://jquery-mdstrap.corneliucirlan.com/img/screenshot.png">
 
         <link rel="stylesheet" href="css/style.css" />
-
     </head>
     <body>
 
@@ -41,7 +40,10 @@
                     </button>
 
                     <!-- Brand -->
-                    <h1 class="navbar-brand">jQuery mdStrap</h1>
+                    <div class="plugin-title">
+                        <h1 class="navbar-brand">jQuery mdStrap</h1>
+                        <span class="plugin-version">v4.0</span>
+                    </div>
 
                     <!-- Main menu -->
                     <ul class="navbar-nav navbar-nav-left">
@@ -50,6 +52,11 @@
                         <li class="nav-item"><a class="nav-link" href="#options">Options</a></li>
                         <li class="nav-item"><a class="nav-link" href="#development">Development</a></li>
                     </ul>
+
+                    <div class="navbar-text">
+                        <a class="btn btn-sm btn-outline-github" target="_blank" href="https://www.github.com/corneliucirlan/jquery-mdstrap"><i class="fa fa-github"> View on GitHub</i></a>
+                        <a class="btn btn-sm btn-outline-github plugin-zip" target="_blank" href="https://github.com/corneliucirlan/mdstrap/releases"><i class="fa fa-download"> Download .zip</i></a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -75,13 +82,13 @@
                     <pre class="language-powershell"><code>$ npm install jquery-mdstrap</code></pre>
                     <p>Running any of this commands will download the plugin into their respective location.</p>
                     <h3>Manual installation</h3>
-                    <p>If you don't feel comfortable with using Bower, you can install the plugin manually. <a href="https://github.com/corneliucirlan/mdstrap/releases" target="_blank">Download from here</a> in a <code class="language-markup">.zip</code> format and unzip the file. Place the contents of the <code class="language-markup">dist/</code> folder into your project.</p>
+                    <p>If you don't feel comfortable with using Bower, you can install the plugin manually. <a class="plugin-zip" href="https://github.com/corneliucirlan/mdstrap/releases" target="_blank">Download from here</a> in a <code class="language-markup">.zip</code> format and unzip the file. Place the contents of the <code class="language-markup">dist/</code> folder into your project.</p>
 
                     <p>No matter what method you've chosen, you will now have to include the plugin's files into your project.</p>
                     <pre class="language-markup">
                         <code>
 &lt;!-- Bootstrap CSS --&gt;
-&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" /&gt;
+&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" /&gt;
 
 &lt;!-- jQuery library --&gt;
 &lt;script src="//code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
@@ -221,6 +228,6 @@ jQuery(document).ready(function($) {
         </footer>
 
         <!-- JavaScript -->
-        <script src="js/functions-dist.js"></script>
+        <script src="js/functions.min.js"></script>
     </body>
 </html>

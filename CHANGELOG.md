@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+##### Version 4.0.1 (2018.05.29)
+- fixed bug where plugin wouldn't work correctly on page reload
+- changed homepage URL
+- updated documentation page
+
 ##### Version 4.0.0 (2018.02.18)
 - updated Bootstrap to v4.0.0
 - moved bower dependencies to npm
