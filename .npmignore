@@ -11,3 +11,6 @@
 .sass-cache/
 *.css.map
 *.js.map
+
+### Prepros ###
+prepros-6.config
