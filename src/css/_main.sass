@@ -1,0 +1,64 @@
+body
+	background-color: gray('300')
+
+.container-fluid
+	max-width: $max-width
+
+.plugin-version
+	color: $navbar-dark-color
+	font-size: $font-size-base * .85
+
+
+.navbar-text
+	text-align: center
+	width: 100%
+
+.btn-outline-github
+	border: 1px solid $navbar-dark-color
+	color: $navbar-dark-color !important
+	display: inline-block
+	margin: $spacer/3
+	padding: $spacer/4 $spacer
+
+	&:hover
+		border-color: $white
+		color: $white !important
+
+main
+	margin-top: 7 * $spacer
+
+	.row
+		margin-top: 2 * $spacer
+
+a
+	@include transition
+	color: color('blue')
+
+	footer &
+		@include transition
+		color: color('white')
+
+	&:hover
+		color: darken(color('blue'), 30%)
+		text-decoration: none
+
+footer
+	color: color('white')
+	margin-top: 2 * $spacer
+	padding: 2 * $spacer 0
+
+	// &:hover
+	// 	color: darken(color('white'), 30%)
+	// 	text-decoration: none
+
+@include media-breakpoint-up(md)
+	.navbar
+		.container-fluid
+			flex-wrap: wrap
+
+		.plugin-title
+			padding-bottom: 0
+			width: 100%
+
+		.navbar-text
+			width: auto

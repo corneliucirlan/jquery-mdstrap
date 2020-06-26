@@ -1,37 +1,79 @@
 {
-  "name": "jquery-mdstrap",
-  "version": "4.0.1",
-  "description": "jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design",
-  "main": "dist/js/jquery-mdstrap.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/corneliucirlan/jquery-mdstrap.git"
-  },
-  "keywords": [
-    "jquery",
-    "bootstrap",
-    "material",
-    "design",
-    "plugin",
-    "google",
-    "mobile",
-    "menu",
-    "responsive",
-    "menu"
-  ],
-  "author": "Corneliu Cirlan <corneliu@corneliucirlan.com> (https://www.corneliucirlan.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/corneliucirlan/jquery-mdstrap/issues"
-  },
-  "homepage": "https://jquery-mdstrap.corneliucirlan.com/",
-  "devDependencies": {
-    "bootstrap": "^4.1.1",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "prismjs": "^1.14.0"
-  }
+	"name": "jquery-mdstrap",
+	"version": "4.0.1",
+	"description": "jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design",
+	"main": "dist/js/jquery-mdstrap.js",
+	"scripts": {
+		"watch": "webpack --watch",
+		"start": "webpack-dev-server --open --color",
+		"build": "webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/corneliucirlan/jquery-mdstrap.git"
+	},
+	"keywords": [
+		"jquery",
+		"bootstrap",
+		"material",
+		"design",
+		"plugin",
+		"google",
+		"mobile",
+		"menu",
+		"responsive",
+		"menu"
+	],
+	"author": "Corneliu Cirlan <corneliu@corneliucirlan.com> (https://www.corneliucirlan.com)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/corneliucirlan/jquery-mdstrap/issues"
+	},
+	"homepage": "https://jquery-mdstrap.corneliucirlan.com/",
+	"devDependencies": {
+		"@babel/cli": "^7.6.2",
+		"@babel/core": "^7.6.2",
+		"@babel/preset-env": "^7.6.2",
+		"autoprefixer": "^9.8.3",
+		"babel-eslint": "^10.0.3",
+		"babel-loader": "^8.0.6",
+		"bootstrap": "^4.5.0",
+		"clean-webpack-plugin": "^3.0.0",
+		"css-loader": "^3.2.0",
+		"css-mqpacker": "^7.0.0",
+		"eslint": "^6.5.1",
+		"eslint-config-prettier": "^6.4.0",
+		"eslint-config-wordpress": "^2.0.0",
+		"eslint-loader": "^3.0.2",
+		"eslint-plugin-prettier": "^3.1.1",
+		"extract-text-webpack-plugin": "^3.0.2",
+		"file-loader": "^4.3.0",
+		"font-awesome": "^4.7.0",
+		"html-webpack-plugin": "^4.3.0",
+		"img-loader": "^3.0.1",
+		"jquery": "^3.5.1",
+		"jquery-mdstrap": "^2.3.0",
+		"jquery-validation": "^1.19.2",
+		"mini-css-extract-plugin": "^0.8.0",
+		"node-sass": "^4.12.0",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"postcss-loader": "^3.0.0",
+		"prettier": "^1.18.2",
+		"prismjs": "^1.20.0",
+		"sass-loader": "^8.0.0",
+		"style-loader": "^1.0.0",
+		"stylelint": "^13.6.1",
+		"stylelint-config-recommended": "^3.0.0",
+		"stylelint-config-wordpress": "^17.0.0",
+		"stylelint-order": "^4.1.0",
+		"stylelint-scss": "^3.18.0",
+		"stylelint-webpack-plugin": "^2.1.0",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"webpack": "^4.41.0",
+		"webpack-cli": "^3.3.9",
+		"webpack-dev-server": "^3.11.0",
+		"webpack-fix-style-only-entries": "^0.5.1",
+		"wp-pot-cli": "^1.2.4"
+	},
+	"dependencies": {}
 }

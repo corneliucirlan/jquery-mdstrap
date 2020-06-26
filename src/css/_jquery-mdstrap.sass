@@ -8,165 +8,165 @@
  */
 
 .mds-overlay
-    background-color: $overlay-bg-color
-    bottom: 0
-    display: none
-    height: 100%
-    left: 0
-    margin: 0 auto
-    position: fixed
-    right: 0
-    top: 0
-    z-index: 999
+	background-color: $overlay-bg-color
+	bottom: 0
+	display: none
+	height: 100%
+	left: 0
+	margin: 0 auto
+	position: fixed
+	right: 0
+	top: 0
+	z-index: 999
 
 .mds-fixed-top
-    @include transition
-    @include box-shadow($fixed-top-shadow)
+	@include transition
+	@include box-shadow($fixed-top-shadow)
 
 .mds-disable-scroll
-    height: 100%
-    overflow: hidden
+	height: 100%
+	overflow: hidden
 
 .navbar
-    flex-direction: row
-    padding: 0
-    pointer-events: all
+	flex-direction: row
+	padding: 0
+	pointer-events: all
 
-    .container-fluid
-        display: inherit
+	.container-fluid
+		display: inherit
 
-    // Navbar toggler
-    .navbar-toggler
-        border: 0
-        cursor: pointer
-        display: none
-        margin: auto 0
-        outline: 0
+	// Navbar toggler
+	.navbar-toggler
+		border: 0
+		cursor: pointer
+		display: none
+		margin: auto 0
+		outline: 0
 
-    // Navigation menu
-    .navbar-nav
-        @include box-shadow(none)
-        color: inherit
-        display: flex
-        flex-direction: row
-        height: auto
-        left: 0
-        max-width: 100%
-        position: relative
-        top: 0
+	// Navigation menu
+	.navbar-nav
+		@include box-shadow(none)
+		color: inherit
+		display: flex
+		flex-direction: row
+		height: auto
+		left: 0
+		max-width: 100%
+		position: relative
+		top: 0
 
-        &.navbar-nav-left,
-        &.navbar-nav-right
-            left: inherit
-            right: inherit
+		&.navbar-nav-left,
+		&.navbar-nav-right
+			left: inherit
+			right: inherit
 
-            // Navigation menu item
-            .nav-item
-                padding: $spacer / 2
-                width: auto
+			// Navigation menu item
+			.nav-item
+				padding: $spacer / 2
+				width: auto
 
-                &:first-child
-                    padding-left: 0
+				&:first-child
+					padding-left: 0
 
-                    .nav-link
-                        padding-left: 0
+					.nav-link
+						padding-left: 0
 
-                    // Toggleable modifiers
-    &.navbar-toggleable
-        @each $breakpoint in map-keys($grid-breakpoints)
-            $next: breakpoint-next($breakpoint, $grid-breakpoints)
-            $infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+					// Toggleable modifiers
+	&.navbar-toggleable
+		@each $breakpoint in map-keys($grid-breakpoints)
+			$next: breakpoint-next($breakpoint, $grid-breakpoints)
+			$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
 
-            &#{$infix}
-                @include media-breakpoint-down($breakpoint)
-                    .container-fluid
-                        align-items: center
-                        display: flex
-                        justify-content: space-between
+			&#{$infix}
+				@include media-breakpoint-down($breakpoint)
+					.container-fluid
+						align-items: center
+						display: flex
+						justify-content: space-between
 
-                    // Navbar toggler
-                    .navbar-toggler
-                        display: block
+					// Navbar toggler
+					.navbar-toggler
+						display: block
 
-                        &.navbar-toggler-left,
-                        &.navbar-toggler-right
-                            position: initial
+						&.navbar-toggler-left,
+						&.navbar-toggler-right
+							position: initial
 
-                        &.active,
-                        &.focus,
-                        &:hover,
-                        &:visited
-                            outline: 0
+						&.active,
+						&.focus,
+						&:hover,
+						&:visited
+							outline: 0
 
-                        // Navigation menu
-                    .navbar-nav
-                        @include transition
-                        @include box-shadow($fixed-top-shadow)
-                        background-color: inherit
-                        display: none
-                        height: 100vh
-                        max-width: auto
-                        padding: 0
-                        pointer-events: all
-                        position: fixed
-                        top: 0
-                        width: auto
+					// Navigation menu
+					.navbar-nav
+						@include transition
+						@include box-shadow($fixed-top-shadow)
+						background-color: inherit
+						display: none
+						height: 100vh
+						max-width: auto
+						padding: 0
+						pointer-events: all
+						position: fixed
+						top: 0
+						width: auto
 
-                        &.navbar-nav-left,
-                        &.navbar-nav-right
-                            &.mds-active
-                                overflow-y: auto
+						&.navbar-nav-left,
+						&.navbar-nav-right
+							&.mds-active
+								overflow-y: auto
 
-                        &.navbar-nav-left
-                            left: -100%
+						&.navbar-nav-left
+							left: -100%
 
-                            &.mds-active
-                                animation: fly-in-left 200ms
-                                left: 0%
+							&.mds-active
+								animation: fly-in-left 200ms
+								left: 0%
 
-                        &.navbar-nav-right
-                            right: -100%
+						&.navbar-nav-right
+							right: -100%
 
-                            &.mds-active
-                                animation: fly-in-right 200ms
-                                right: 0%
+							&.mds-active
+								animation: fly-in-right 200ms
+								right: 0%
 
-                            // Navigation menu item
-                        .nav-item
-                            @include transition
-                            display: block
-                            margin: 0
-                            padding: $spacer/2 2*$spacer
-                            width: 100%
+						// Navigation menu item
+						.nav-item
+							@include transition
+							display: block
+							margin: 0
+							padding: $spacer/2 2*$spacer
+							width: 100%
 
-                            &:first-child
-                                padding-left: 2 * $spacer
+							&:first-child
+								padding-left: 2 * $spacer
 
-                    &.mds-active
-                        @include box-shadow(none)
-                        pointer-events: none
-                        visibility: hidden
+					&.mds-active
+						@include box-shadow(none)
+						pointer-events: none
+						visibility: hidden
 
-                        .navbar-nav
-                            display: block
-                            visibility: visible
+						.navbar-nav
+							display: block
+							visibility: visible
 
-                        @each $key, $color in $theme-colors
-                            &.bg-#{$key}
-                                .navbar-nav
-                                    background-color: $color
-                                    z-index: 999
+						@each $key, $color in $theme-colors
+							&.bg-#{$key}
+								.navbar-nav
+									background-color: $color
+									z-index: 999
 
 @keyframes fly-in-left
-    0%
-        left: -100%
+	0%
+		left: -100%
 
-    100%
-        left: 0%
+	100%
+		left: 0%
 
 @keyframes fly-in-right
-    0%
-        right: -100%
+	0%
+		right: -100%
 
-    100%
-        right: 0%
+	100%
+		right: 0%

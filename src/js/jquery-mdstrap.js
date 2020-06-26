@@ -7,75 +7,74 @@
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
-;(function($) {
-    'use strict';
+(function($) {
+    'use strict'
 
     //if ($.mobile !== 'undefined')
-    //    $.mobile.autoInitializePage = false;
+    //    $.mobile.autoInitializePage = false
 
     $.fn.mdStrap = function(options) {
 
         // Plugin default settings
-        var defaults = {
+        let defaults = {
             'fixedTop'          : true,
             'menuTrigger'       : '.navbar-toggler-left',
             'scrollValue'       : '10',
 
             // debugging
             'debug'             : false
-        };
+        }
 
         // Plugin settings
-        var settings = defaults;
-        if (options) settings = $.extend(true, {}, defaults, options);
+		let settings = options ? $.extend(true, {}, defaults, options) : defaults 
 
         // Declare function variables
-        var $menu = $(this).hasClass('navbar-nav-left') ? $('.navbar-nav-left') : $('.navbar-nav-right');
-        var $menuParent = $menu.parents('nav');
+        let $menu = $(this).hasClass('navbar-nav-left') ? $('.navbar-nav-left') : $('.navbar-nav-right'),
+        	$menuParent = $menu.parents('nav'),
 
-        //// Various internal options/classes
-        var internal = {
-            'fixedTop'              : 'mds-fixed-top',
-            'disableScroll'         : 'mds-disable-scroll',
-            'overlay'               : 'mds-overlay',
-        };
+	        // Various internal options/classes
+        	internal = {
+				'fixedTop'              : 'mds-fixed-top',
+				'disableScroll'         : 'mds-disable-scroll',
+				'overlay'               : 'mds-overlay',
+			}
 
-        if ($menu.length !== 0) initialize(settings, internal, $menu, $menuParent);
-        else console.error('Menu "' + $menu + '" not available.');
+        if ($menu.length !== 0) initialize(settings, internal, $menu, $menuParent)
+		    else console.error('Menu "' + $menu + '" not available.')
 
-        return this;
-    };
+        return this
+    }
 
     // Init function
     function initialize(settings, internalSettings, $menu, $menuParent) {
 
         // Add overlay to document
         if ($('div.' + internalSettings.overlay).length == 0)
-            $('body').prepend('<div class="' + internalSettings.overlay + '"></div>');
+            $('body').prepend('<div class="' + internalSettings.overlay + '"></div>')
 
         // Check if page already scrolled on load
-        toggleFixedTop(settings, internalSettings, $menuParent);
+        toggleFixedTop(settings, internalSettings, $menuParent)
 
         // Open menu
-        openMobileMenu(settings, internalSettings, $menu, $menuParent);
+        openMobileMenu(settings, internalSettings, $menu, $menuParent)
 
         // Close menu
-        closeMenu(internalSettings, $menu, $menuParent);
+        closeMenu(internalSettings, $menu, $menuParent)
 
         // Window scroll
-        windowScroll(settings, internalSettings, $menuParent);
+        windowScroll(settings, internalSettings, $menuParent)
 
         // Debugging ...
         if (settings.debug === true)
-            debugging(settings, internalSettings);
+            debugging(settings, internalSettings)
     }
 
     // Window scroll
     function windowScroll(settings, internalSettings, $menuParent) {
 
         $(window).on('scroll', function(event) {
-            toggleFixedTop(settings, internalSettings, $menuParent);
-        });
+            toggleFixedTop(settings, internalSettings, $menuParent)
+        })
     }
 
     // Toggle menu fixed top
@@ -83,10 +82,10 @@
 
         if (settings.fixedTop === true) {
 
-            var wScroll = $(window).scrollTop();
+            let wScroll = $(window).scrollTop()
 
-            if (wScroll > settings.scrollValue) $menuParent.addClass(internalSettings.fixedTop);
-            else $menuParent.removeClass(internalSettings.fixedTop);
+            if (wScroll > settings.scrollValue) $menuParent.addClass(internalSettings.fixedTop)
+            	else $menuParent.removeClass(internalSettings.fixedTop)
         }
     }
 
@@ -94,25 +93,25 @@
     function openMobileMenu(settings, internalSettings, $menu, $menuParent) {
 
         $(settings.menuTrigger).on('click', function(event) {
-            event.preventDefault();
+            event.preventDefault()
 
             // toggle overlay
-            toggleOverlay(false, internalSettings);
+            toggleOverlay(false, internalSettings)
 
             // Toggle menu
-            toggleMenu($menu, $menuParent, false);
-        });
+            toggleMenu($menu, $menuParent, false)
+        })
     }
 
     // Close mobile menu
     function closeMobileMenu(internalSettings, $menu, $menuParent) {
-        //var wScroll = $(window).scrollTop();
+        //let wScroll = $(window).scrollTop()
 
         // toggle overlay
-        toggleOverlay(true, internalSettings);
+        toggleOverlay(true, internalSettings)
 
         // Toggle menu
-        toggleMenu($menu, $menuParent, true);
+        toggleMenu($menu, $menuParent, true)
     }
 
     // Toggle menu
@@ -120,32 +119,32 @@
 
         // Hide menu
         if (isVisible) {
-            $menuParent.removeClass('mds-active');
-            $menu.removeClass('mds-active');
+            $menuParent.removeClass('mds-active')
+            $menu.removeClass('mds-active')
         }
 
-        // Show menu
-        else {
-            $menuParent.addClass('mds-active');
-            $menu.addClass('mds-active');
-        }
+			// Show menu
+			else {
+				$menuParent.addClass('mds-active')
+				$menu.addClass('mds-active')
+			}
     }
 
     // Toggle overlay
     function toggleOverlay(isVisible, internalSettings) {
-        var $overlay = $('.' + internalSettings.overlay),
-        $body = $('body');
+        let $overlay = $('.' + internalSettings.overlay),
+        	$body = $('body')
 
         // Is visible
         if (isVisible) {
-            $overlay.fadeOut('fast');
-            $body.removeClass(internalSettings.disableScroll);
+            $overlay.fadeOut('fast')
+            $body.removeClass(internalSettings.disableScroll)
         }
 
         // Is not visible
         else {
-            $overlay.fadeIn('fast');
-            $body.addClass(internalSettings.disableScroll);
+            $overlay.fadeIn('fast')
+            $body.addClass(internalSettings.disableScroll)
         }
     }
 
@@ -155,24 +154,24 @@
         // Escape key
         $(document).on('keydown', function(event) {
             if (event.keyCode === 27 && $('.' + internalSettings.overlay + ':visible').length > 0)
-                closeMobileMenu(internalSettings, $menu, $menuParent);
-        });
+                closeMobileMenu(internalSettings, $menu, $menuParent)
+        })
 
         // Overlay click
         $('.' + internalSettings.overlay).on('click', function(event) {
-            closeMobileMenu(internalSettings, $menu, $menuParent);
-        });
+            closeMobileMenu(internalSettings, $menu, $menuParent)
+        })
     }
 
     // Debugging
     function debugging(settings, internalSettings) {
-        console.log('\nPlugin settings:');
-        console.log(settings);
+        console.log('\nPlugin settings:')
+        console.log(settings)
 
-        console.log('\nInternal settings/classes:');
-        console.log(internalSettings);
+        console.log('\nInternal settings/classes:')
+        console.log(internalSettings)
 
-        console.log('\njQuery version: ' + jQuery.fn.jquery);
+        console.log('\njQuery version: ' + jQuery.fn.jquery)
     }
 
-})(jQuery);
+})(jQuery)
