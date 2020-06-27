@@ -9,8 +9,8 @@ const path = require('path'),
 module.exports = {
 	context: __dirname,
 	entry: {
-		"dist/js/jquery-mdstrap": path.resolve(__dirname, 'src/js/jquery-mdstrap.js'),
-		"dist/css/jquery-mdstrap": path.resolve(__dirname, 'src/css/_compile.sass'),
+		"dist/js/jquery-mdstrap.min": path.resolve(__dirname, 'src/js/jquery-mdstrap.js'),
+		"dist/css/jquery-mdstrap.min": path.resolve(__dirname, 'src/css/_compile.sass'),
 		"css/style": path.resolve(__dirname, 'src/css/style.sass'),
 		"js/main": path.resolve(__dirname, 'src/js/main.js')
 	},
@@ -18,7 +18,7 @@ module.exports = {
 		path: path.resolve(__dirname),
 		filename: '[name].js'
 	},
-	mode: 'development',
+	// mode: 'development',
 	devtool: 'source-map',
 	devServer: {
 		contentBase: './',
@@ -41,18 +41,6 @@ module.exports = {
 					MiniCssExtractPlugin.loader,
 					'css-loader',
 					'sass-loader'
-				]
-			},
-			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].[ext]',
-							outputPath: '`fonts/'
-						}
-					}
 				]
 			}
 		]

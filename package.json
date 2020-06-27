@@ -1,6 +1,6 @@
 {
 	"name": "jquery-mdstrap",
-	"version": "4.0.1",
+	"version": "4.1.0",
 	"description": "jQuery plugin built on top of Bootstrap framework to create mobile menus similar to Google's Material Design",
 	"main": "dist/js/jquery-mdstrap.js",
 	"scripts": {
@@ -48,7 +48,6 @@
 		"eslint-plugin-prettier": "^3.1.1",
 		"extract-text-webpack-plugin": "^3.0.2",
 		"file-loader": "^4.3.0",
-		"font-awesome": "^4.7.0",
 		"html-webpack-plugin": "^4.3.0",
 		"img-loader": "^3.0.1",
 		"jquery": "^3.5.1",
