@@ -10,7 +10,7 @@ module.exports = {
 	context: __dirname,
 	entry: {
 		"dist/js/jquery-mdstrap.min": path.resolve(__dirname, 'src/js/jquery-mdstrap.js'),
-		"dist/css/jquery-mdstrap.min": path.resolve(__dirname, 'src/css/_compile.sass'),
+		"dist/css/jquery-mdstrap.min": path.resolve(__dirname, 'src/css/jquery-mdstrap.sass'),
 		"css/style": path.resolve(__dirname, 'src/css/style.sass'),
 		"js/main": path.resolve(__dirname, 'src/js/main.js')
 	},
