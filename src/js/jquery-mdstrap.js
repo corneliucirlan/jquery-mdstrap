@@ -3,7 +3,7 @@
  *
  * jQuery plugin that enables mobile slide navigation for Bootstrap v4 framework
  *
- * @version 4.2.0
+ * @version 4.2.1
  * @author Corneliu Cirlan (www.corneliucirlan.com)
  */
 
@@ -65,12 +65,12 @@
 		windowScroll(settings, internalSettings, $menuParent)
 		
 		if (isTouchEnabled()) {		
-			$('.dropdown-toggle').on('click', () => {
+			$('.dropdown').on('click', () => {
 				$('.dropdown-menu').toggleClass('active')
 			})
 		}
 		else {
-			$('.dropdown-toggle').hover(() => {
+			$('.dropdown').hover(() => {
 				$('.dropdown-menu').toggleClass('active')
 			})
 		}		
