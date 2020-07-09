@@ -4,7 +4,8 @@ const path = require('path'),
 	OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
 	FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries"),
 	StyleLintPlugin = require('stylelint-webpack-plugin'),
-	UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+	UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
+	autoprefixer = require('autoprefixer')
 
 module.exports = {
 	context: __dirname,
@@ -51,6 +52,12 @@ module.exports = {
 						}
 					},
 					{
+						loader: 'postcss-loader',
+						options: {
+							sourceMap: true
+						}
+					},
+					{
 						loader: 'sass-loader',
 						options: {
 							sourceMap: true
@@ -69,7 +76,14 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery"
-		})
+		}),
+		new webpack.LoaderOptionsPlugin({
+			options: {
+				postcss: [
+					autoprefixer()
+				]
+			}
+		}),
 	],
 	optimization: {
 		minimizer: [
