@@ -2,7 +2,7 @@
 
 # jQuery mdStrap
 
-## This package has been deprecated and moved to https://mdsm.corneliucirlan.com
+## This package has been deprecated. Use the new package available at https://mdsm.corneliucirlan.com
 
 jQuery plugin built on top of Bootstrap framework to create mobile menus.
 
